@@ -22,7 +22,7 @@ module.exports = {
   
       if (sessionAttributes.state === 'PLAY_AGAIN') {
 
-        // clean up game State in Session Attributes
+        // TODO: clean up game State in Session Attributes
         
         speechText = strings["EXIT"];
         sessionAttributes.state = 'ENDED';

@@ -8,3 +8,13 @@ TriviaExampleIndex.js is the example index.js from https://github.com/alexa/skil
 Utils.js contains all utility functions and scoring required.
 
 en-US.json should contain the final JSON interaction model with all answers (and their IDs).
+
+# States
+
+state: ['INITIAL', 'GAME_STARTED', 'PLAY_AGAIN', 'ENDED']\
+player: [1,2]\
+lastUtterance: String\
+question: String\
+score: [10, 50]\
+currentPlayer: [1,2]\
+round: [1,2,3]: which category?

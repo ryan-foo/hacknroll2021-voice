@@ -1,7 +1,11 @@
 // key: accessing from the answer handler
 // value: the score to add for the player.
 
-// for our own reference, we can comment the 
+// for our own reference, we can comment the necessary out.
+
+function getId(slot) {
+    return slot.resolutions.resolutionsPerAuthority[0].values[0].value.id;
+}
 
 module.exports = {
     PHRASE:
@@ -13,7 +17,7 @@ module.exports = {
             D: 0 // entertained
         },
         2: {
-            A: 0,
+            A: 0, 
             B: 1,
             C: 0,
             D: 0
@@ -28,5 +32,7 @@ module.exports = {
     SONG: {
         1: 1, // home
         2: 1 // save my world
-    }
+    },
+
+    getId
 }
