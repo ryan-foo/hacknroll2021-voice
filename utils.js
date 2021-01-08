@@ -7,6 +7,18 @@ function getId(slot) {
     return slot.resolutions.resolutionsPerAuthority[0].values[0].value.id;
 }
 
+function resetState(sessionAttributes) {
+    sessionAttributes.state = "INITIAL";
+    sessionAttributes.player = "1";
+    sessionAttributes.lastUtterance = "I haven't said anything yet.";
+    sessionAttributes.question = 0;
+    sessionAttributes.currentPlayer = "1";
+    sessionAttributes.round = 0;
+    console.log(sessionAttributes);
+}
+
+// random question
+
 module.exports = {
     PHRASE:
     {
@@ -34,5 +46,7 @@ module.exports = {
         2: 1 // save my world
     },
 
-    getId
+    getId,
+    resetState
 }
+

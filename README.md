@@ -12,9 +12,9 @@ en-US.json should contain the final JSON interaction model with all answers (and
 # States
 
 state: ['INITIAL', 'GAME_STARTED', 'PLAY_AGAIN', 'ENDED']\
-player: [1,2]\
+player: 1 : [1,2]\
 lastUtterance: String\
-question: String\
+question: 1 : [1,2,3]\
 score: [10, 50]\
 currentPlayer: [1,2]\
 round: [1,2,3]: which category?
