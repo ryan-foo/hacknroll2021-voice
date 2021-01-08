@@ -49,7 +49,11 @@ module.exports = {
             speechText += strings['SCORE'] + points[player] + ", Player " + (player + 1).toString() + " ";
             
             if (numPlayers === 2) { //duo
+
+                sessionAttributes.currentQuestion += 1;
+
                 if (player === 1) { //player2:
+                    
                     speechText += strings['PLAYER_1'] + strings['AGAIN'] + strings['QUESTION_' + (sessionAttributes.currentQuestion).toString()] + strings[cat][questions[count]]
                     sessionAttributes.round += 1;
                 } else { //player1
@@ -58,9 +62,11 @@ module.exports = {
                 sessionAttributes.currentQuestion += 1;
                 sessionAttributes.player = utils.resetPlayer(player);
             } else { //solo
-                speechText += strings['QUESTION_' + (sessionAttributes.currentQuestion).toString()] + strings[cat][questions[count]];
-                sessionAttributes.round += 1;
+                
                 sessionAttributes.currentQuestion += 2;
+
+                speechText += strings['QUESTION_' + (sessionAttributes.currentQuestion + 2).toString()] + strings[cat][questions[count]];
+                sessionAttributes.round += 1;
             }
         }
 
