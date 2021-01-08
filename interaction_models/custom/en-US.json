@@ -99,37 +99,215 @@
                     "name": "Answer",
                     "values": [
                         {
-                            "id": "SONG_1",
-                            "name": {
-                                "value": "home"
-                            }
-                        },
-                        {
                             "id": "MOVIE_1",
                             "name": {
                                 "value": "ah boys to men"
                             }
                         },
                         {
-                            "id": "PHRASE_1.4",
+                            "id": "SONG_5",
+                            "name": {
+                                "value": "room at the table"
+                            }
+                        },
+                        {
+                            "id": "SONG_4",
+                            "name": {
+                                "value": "i wouldn't know any better than you",
+                                "synonyms": [
+                                    "any better than you"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "SONG_3",
+                            "name": {
+                                "value": "singapore town"
+                            }
+                        },
+                        {
+                            "id": "SONG_2",
+                            "name": {
+                                "value": "save my world"
+                            }
+                        },
+                        {
+                            "id": "SONG_1",
+                            "name": {
+                                "value": "home",
+                                "synonyms": [
+                                    "this is home"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "PHRASE_6.D",
+                            "name": {
+                                "value": "joyful"
+                            }
+                        },
+                        {
+                            "id": "PHRASE_6.C",
+                            "name": {
+                                "value": "invasion"
+                            }
+                        },
+                        {
+                            "id": "PHRASE_6.B",
+                            "name": {
+                                "value": "greeting",
+                                "synonyms": [
+                                    "hello",
+                                    "greetings"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "PHRASE_6.A",
+                            "name": {
+                                "value": "fortunate"
+                            }
+                        },
+                        {
+                            "id": "PHRASE_5.D",
+                            "name": {
+                                "value": "awkward"
+                            }
+                        },
+                        {
+                            "id": "PHRASE_5.C",
+                            "name": {
+                                "value": "lucky"
+                            }
+                        },
+                        {
+                            "id": "PHRASE_5.B",
+                            "name": {
+                                "value": "touch wood",
+                                "synonyms": [
+                                    "touchwood"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "PHRASE_5.A",
+                            "name": {
+                                "value": "embarrassed",
+                                "synonyms": [
+                                    "shy"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "PHRASE_4.D",
+                            "name": {
+                                "value": "discouraged",
+                                "synonyms": [
+                                    "discourage"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "PHRASE_4.C",
+                            "name": {
+                                "value": "disappointed",
+                                "synonyms": [
+                                    "disappoint"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "PHRASE_4.B",
+                            "name": {
+                                "value": "enlightening",
+                                "synonyms": [
+                                    "enlighten"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "PHRASE_4.A",
+                            "name": {
+                                "value": "awesome"
+                            }
+                        },
+                        {
+                            "id": "PHRASE_3.D",
+                            "name": {
+                                "value": "disgusting",
+                                "synonyms": [
+                                    "disgust"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "PHRASE_3.C",
+                            "name": {
+                                "value": "entertaining",
+                                "synonyms": [
+                                    "entertain"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "PHRASE_3.B",
+                            "name": {
+                                "value": "one"
+                            }
+                        },
+                        {
+                            "id": "PHRASE_3.A",
+                            "name": {
+                                "value": "interesting",
+                                "synonyms": [
+                                    "interest"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "PHRASE_2.D",
+                            "name": {
+                                "value": "nervous"
+                            }
+                        },
+                        {
+                            "id": "PHRASE_2.C",
+                            "name": {
+                                "value": "tired"
+                            }
+                        },
+                        {
+                            "id": "PHRASE_2.B",
+                            "name": {
+                                "value": "terrible"
+                            }
+                        },
+                        {
+                            "id": "PHRASE_2.A",
+                            "name": {
+                                "value": "delicious"
+                            }
+                        },
+                        {
+                            "id": "PHRASE_1.D",
                             "name": {
                                 "value": "entertained"
                             }
                         },
                         {
-                            "id": "PHRASE_1.3",
+                            "id": "PHRASE_1.C",
                             "name": {
                                 "value": "surprised"
                             }
                         },
                         {
-                            "id": "PHRASE_1.2",
+                            "id": "PHRASE_1.B",
                             "name": {
                                 "value": "sad"
                             }
                         },
                         {
-                            "id": "PHRASE_1.1",
+                            "id": "PHRASE_1.A",
                             "name": {
                                 "value": "frustrated"
                             }
