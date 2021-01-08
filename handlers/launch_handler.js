@@ -23,7 +23,7 @@ module.exports = {
         utils.resetState(sessionAttributes);
         
         sessionAttributes.lastUtterance = speechText;
-        // handlerInput.attributesManager.setSessionAttributes(sessionAttributes);
+        handlerInput.attributesManager.setSessionAttributes(sessionAttributes);
     
         return handlerInput.responseBuilder
             .speak(speechText)
