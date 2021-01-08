@@ -40,7 +40,7 @@ module.exports = {
         AGAIN: "again",
 
         // RESPONSE TO USERS
-        SKIPPING: "Ok, the correct answer was <>.",
+        SKIPPING: "Ok, the correct answer was ",
         SCORE: `Your score is.`, // string formatting here.
         CORRECT: "Woohoo that's correct, you're doing great!",
         WRONG: "Sian you got it wrong! But nehmind at least now you know the answer.",

@@ -40,9 +40,7 @@ module.exports = {
                     speechText += strings['PLAYER_1'] + strings['AGAIN'] + strings['QUESTION_' + (sessionAttributes.currentQuestion).toString()] + strings.cat[questions[count]]
                 } else { //player1
                     speechText += strings['PLAYER_2'] + strings['QUESTION_' + (sessionAttributes.currentQuestion).toString()] + strings.cat[questions[count]]
-                // strings['PLAYER_2'] + strings['QUESTION_2'] // number based on cat
                 }
-                // speechText += strings['QUESTION_' + (sessionAttributes.currentQuestion).toString()] + strings.cat[questions[count - 1]]; //[nextQuestion - 1];
                 sessionAttributes.player = utils.resetPlayer(player);
             } else { //solo
                 speechText += points[player] + strings['QUESTION_' + (sessionAttributes.currentQuestion + 2).toString()] + strings.cat[questions[count]];

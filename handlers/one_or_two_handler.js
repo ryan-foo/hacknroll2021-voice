@@ -19,7 +19,7 @@ module.exports = {
         const slots = request.intent.slots;
         const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
         const questions = sessionAttributes.questions;
-        let totalPlayers = slots.oneOrTwo.value; // number of players
+        let totalPlayers = parseInt(slots.oneOrTwo.value); // number of players
         sessionAttributes.players = totalPlayers;
 
         console.log(`We have ${totalPlayers} players.`)
