@@ -33,9 +33,9 @@ module.exports = {
 
         // add points
         if (cat === 'PHRASE') {
-            points[player] += utils.answers[cat][qn][ans];
+            points[player] += utils.answers[cat][qn][ans][0];
         } else {
-            points[player] += utils.answers[cat][ans];
+            points[player] += utils.answers[cat][ans][0];
         }
 
         //check if end game
@@ -47,12 +47,14 @@ module.exports = {
             if (numPlayers === 2) { //duo
                 if (player === 1) { //player2:
                     speechText += strings['PLAYER_1'] + strings['AGAIN'] + strings['QUESTION_' + (sessionAttributes.currentQuestion).toString()] + strings[cat][questions[count]]
+                    sessionAttributes.round += 1;
                 } else { //player1
                     speechText += strings['PLAYER_2'] + strings['QUESTION_' + (sessionAttributes.currentQuestion).toString()] + strings[cat][questions[count]]
                 }
                 sessionAttributes.player = utils.resetPlayer(player);
             } else { //solo
                 speechText += strings['QUESTION_' + (sessionAttributes.currentQuestion + 2).toString()] + strings[cat][questions[count]];
+                sessionAttributes.round += 1;
             }
         }
 
