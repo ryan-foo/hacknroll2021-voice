@@ -28,6 +28,8 @@ module.exports = {
             1: 'What does this phrase mean in English? <audio> These are the options...'
         },
 
+        CANCEL_AND_STOP: "Thanks for playing. Have fun!",
+
         SORRY: "Sorry, that's not one of the options. ",
 
         HELP: "QUIZLAH", // TODO

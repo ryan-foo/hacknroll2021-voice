@@ -13,12 +13,11 @@ module.exports = {
     handle(handlerInput) {  
   
       let speechText;
-      const requestAttributes = handlerInput.attributesManager.getRequestAttributes();
+
       const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
 
       if (sessionAttributes.state == 'PLAY_AGAIN') {
-        sessionAttributes.currentArtist = 'NONE';
-        sessionAttributes.currentQuestion = 0;
+          // reset state
 
         speechText = requestAttributes.t('RESTART') + requestAttributes.t('GREETING');
         sessionAttributes.state = 'ARTIST_PROMPT';

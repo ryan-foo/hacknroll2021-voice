@@ -1,6 +1,8 @@
 // key: accessing from the answer handler
 // value: the score to add for the player.
 
+// for our own reference, we can comment the 
+
 module.exports = {
     PHRASE:
     {
