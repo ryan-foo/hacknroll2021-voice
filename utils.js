@@ -21,7 +21,7 @@ function resetState(sessionAttributes) {
 // random question
 
 // The system:
-// it will be stored in an array. First element is the store.
+// it will be stored in an array. First element is the score.
 // second is the actual answer in text format. This will be given to answer handler etc
 // because you need that to form a proper response! "I.E wrong, the right answer is "frustrated""."
 
@@ -35,7 +35,7 @@ module.exports = {
             D: [0, "entertained"] // entertained
         },
         2: {
-            A: [0, ""], 
+            A: [0, ""],
             B: [1, ""],
             C: [0, ""],
             D: [0, ""]
