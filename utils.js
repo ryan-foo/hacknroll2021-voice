@@ -11,21 +11,45 @@ function resetState(sessionAttributes) {
     sessionAttributes.state = "INITIAL";
     sessionAttributes.player = "1";
     sessionAttributes.lastUtterance = "I haven't said anything yet -- it doesn't look like anything to me...";
-    sessionAttributes.question = 0;
+    sessionAttributes.currentQuestion = "0";
     sessionAttributes.currentPlayer = "1";
     sessionAttributes.round = 0;
+    sessionAttributes.score = [0, 0];
+    sessionAttributes.questions = [[1, 2, 3, 4, 5], [1, 2, 3, 4, 5]];
     console.log(sessionAttributes);
     console.log("I reset the state! :)");
 }
 
-// Random Question
+function getId(slot) {
+    const ans = slot.resolutions.resolutionsPerAuthority[0].values[0].value.id;
+    return {
+        id: ans[-1],
+        qn: ans[-3]
+    }
+}
 
-// The system:
-// it will be stored in an array. First element is the score.
-// second is the actual answer in text format. This will be given to answer handler etc
-// because you need that to form a proper response! "I.E wrong, the right answer is "frustrated""."
+function getAnswer() {
 
-module.exports = {
+}
+
+function checkAnswer(cat, ans, qn) {
+    let selection = answers.cat.qn;
+    const correctAnswer = Object.keys(selection).filter(function(key) {
+        return selection[key][0] === 1;
+    })[0]; //e.g. 'A'
+    if (correctAnswer === ans) {
+        return strings['CORRECT'];
+    } else {
+        return strings['WRONG'] + answers.cat.qn.correctAnswer[1];
+    }
+}
+
+function getRandomQuestion(array) {
+    let qn = array.splice(Math.floor(Math.random()*array.length), 1);
+    return questions[qn];
+}
+
+const answers = {
     PHRASE:
     {
         1: {
@@ -50,9 +74,20 @@ module.exports = {
     SONG: {
         1: [1, "home"],
         2: [1, "save my world"]
-    },
+    }
+}
+// Random Question
 
+// The system:
+// it will be stored in an array. First element is the score.
+// second is the actual answer in text format. This will be given to answer handler etc
+// because you need that to form a proper response! "I.E wrong, the right answer is "frustrated""."
+
+module.exports = {
+    answers,
     getId,
-    resetState
+    resetState,
+    checkAnswer,
+    getRandomQuestion
 }
 

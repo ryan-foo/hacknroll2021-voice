@@ -33,10 +33,11 @@ These are the states used to manage the game. More accurately, sessionAttributes
 state: ['INITIAL', 'GAME_STARTED', 'PLAY_AGAIN', 'ENDED']\
 player: 1 : [1,2]\
 lastUtterance: String\
-question: 1 : [1,2,3]\ Randomly selected in length\ 
+currentQuestion: 1 : [1,2, ..]\ Incrementing count\
+questions: [[1, 2, 3, 4, 5], [1, 2, 3, 4, 5]]\ Randomly selected in length\ 
 score: [10, 50]\
 currentPlayer: [1,2]\
-round: [1,2,3]: which category?
+round: [1,2,3]\ which category\
 
 # Icon Builder
 
