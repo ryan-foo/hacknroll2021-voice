@@ -9,21 +9,22 @@ module.exports = {
         PLAYER_NUM: "How many of you are playing? One or two?",
 
         SONG: {
-            1: 'What is this song? <audio src = "https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Songs/001_home.mp3">',
-            2: '',
-            3: '',
-            4: ''
+            1: "<audio src='https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Songs/001_home.mp3' />",
+            2: "<audio src='https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Songs/002_save_my_world.mp3' />",
+            3: "<audio src='https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Songs/003_singapore_town.mp3' />",
+            4: "<audio src='https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Songs/004_i_wouldnt_know_any_better_than_you.mp3' />",
+            5: "<audio src='https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Songs/005_room_at_the_table.mp3' />"
         },
 
         MOVIE: {
-            1: 'What is this movie? <audio>',
+            1: 'What is this movie? <audio />',
             2: '',
             3: '',
             4: ''
         },
 
         PHRASE: {
-            1: 'What does this phrase mean in English? <audio> These are the options...'
+            1: 'What does this phrase mean in English? <audio /> These are the options...'
         },
 
         SKIPPING: "Ok, the correct answer was <>.",
