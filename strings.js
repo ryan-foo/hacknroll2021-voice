@@ -1,7 +1,3 @@
-// Content for en locales
-
-const utils = require('./utils');
-
 // Localized content for en-* locales
 
 const utils = require('./utils');
