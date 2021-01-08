@@ -20,7 +20,7 @@ const answers = {
         },
         3: {
             A: [0, "interesting"],
-            B: [0, "one"],
+            B: [0, "exciting"],
             C: [0, "entertaining"],
             D: [1, "disgusting"]
         },
@@ -31,37 +31,39 @@ const answers = {
             D: [0, "nervous"]
         },
         5: {
-            A: [0, "delicious"],
-            B: [1, "terrible"],
-            C: [0, "tired"],
-            D: [0, "nervous"]
+            A: [0, "embarrassed"],
+            B: [1, "touchwood"],
+            C: [0, "lucky"],
+            D: [0, "awkward"]
         },
         6: {
-            A: [0, "delicious"],
-            B: [1, "terrible"],
-            C: [0, "tired"],
-            D: [0, "nervous"]
+            A: [0, "fortunate"],
+            B: [1, "greeting"],
+            C: [0, "invasion"],
+            D: [0, "joyful"]
         },
         7: {
-            A: [0, "delicious"],
-            B: [1, "terrible"],
-            C: [0, "tired"],
-            D: [0, "nervous"]
+            A: [0, "reasonable"],
+            B: [0, "friendly"],
+            C: [0, "cheap"],
+            D: [1, "fancy"]
         }
     },
 
     MOVIE: {
         1: [1, "ah boys to men"],
-        2: [0, ""],
-        3: [0, ""],
-        4: [0, ""]
+        2: [1, "i not stupid"],
+        3: [1, "the ghosts must be crazy"],
+        4: [1, "ilo ilo"],
+        5: [1, "money no enough"]
     },
 
     SONG: {
         1: [1, "home"],
         2: [1, "save my world"],
-        3: [1, ""],
-        4: [1, ""]
+        3: [1, "singapore town"],
+        4: [1, "i wouldn't know any better than you"],
+        5: [1, "room at the table"]
     }
 }
 
@@ -82,14 +84,14 @@ function resetState(sessionAttributes) {
 function getId(slot) {
     const ans = slot.resolutions.resolutionsPerAuthority[0].values[0].value.id;
     return {
-        id: ans.charAt(ans.length-1),
+        id: ans.charAt(ans.length - 1),
         qn: ans.charAt(ans.length(-3))
     }
 }
 
 function getAnswer(cat, ans, qn) {
     let selection = answers.cat.qn;
-    const correctAnswer = Object.keys(selection).filter(function(key) {
+    const correctAnswer = Object.keys(selection).filter(function (key) {
         return selection[key][0] === 1;
     })[0]; //e.g. 'A'
     return correctAnswer;
@@ -155,8 +157,8 @@ function initializeRandomQuestions(n) {
     let shuffledSongArray = shuffleArray([...Array(Object.keys(answers.SONG).length).keys()]);
     let shuffledMovieArray = shuffleArray([...Array(Object.keys(answers.MOVIE).length).keys()]);
     let shuffledPhraseArray = shuffleArray([...Array(Object.keys(answers.PHRASE).length).keys()]);
-    return questionsArray.concat(shuffledSongArray.slice(0, n), shuffledMovieArray.slice(0,n),
-    shuffledPhraseArray.slice(0,n));
+    return questionsArray.concat(shuffledSongArray.slice(0, n), shuffledMovieArray.slice(0, n),
+        shuffledPhraseArray.slice(0, n));
 }
 
 // console.log(initializeRandomQuestions(2));
