@@ -37,13 +37,13 @@ module.exports = {
           if (numPlayers === 2) { //duo
               speechText += strings['SCORE'] + points[player];
               if (player === 1) { //player2:
-                  speechText += strings['PLAYER_1'] + strings['AGAIN'] + strings['QUESTION_' + (sessionAttributes.currentQuestion).toString()] + strings.cat[questions[count]]
+                  speechText += strings['PLAYER_1'] + strings['AGAIN'] + strings['QUESTION_' + (sessionAttributes.currentQuestion).toString()] + strings[cat][questions[count]]
               } else { //player1
-                  speechText += strings['PLAYER_2'] + strings['QUESTION_' + (sessionAttributes.currentQuestion).toString()] + strings.cat[questions[count]]
+                  speechText += strings['PLAYER_2'] + strings['QUESTION_' + (sessionAttributes.currentQuestion).toString()] + strings[cat][questions[count]]
               }
               sessionAttributes.player = utils.resetPlayer(player);
           } else { //solo
-              speechText += points[player] + strings['QUESTION_' + (sessionAttributes.currentQuestion + 2).toString()] + strings.cat[questions[count]];
+              speechText += points[player] + strings['QUESTION_' + (sessionAttributes.currentQuestion + 2).toString()] + strings[cat][questions[count]];
           }
       }
 

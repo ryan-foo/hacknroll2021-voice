@@ -101,15 +101,15 @@ function getAnswer(cat, qn) {
 
 function checkAnswer(cat, ans, qn) {
     let correctAnswer = '';
-    let res = strings['CORRECT'];
+    let res = strings['CORRECT'] + strings['QUESTION'];
     if (cat === 'PHRASE') {
         correctAnswer = getAnswer(cat, qn);
         if (! ans === correctAnswer) {
-            res = strings['WRONG'] + answers.cat.qn.correctAnswer[1];
+            res = strings['WRONG'] + ' The correct answer is ' + answers.cat.qn.correctAnswer[1] +'.';
         }
     } else {
         if (! ans === qn) { //qn number and slot id
-            res = strings['WRONG'] + answers.cat.qn[1];
+            res = strings['WRONG'] + ' The correct answer is ' + answers.cat.qn[1] + '.';
         }
     }
     return res;

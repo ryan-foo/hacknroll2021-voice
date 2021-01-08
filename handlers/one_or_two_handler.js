@@ -32,6 +32,7 @@ module.exports = {
         }
 
         sessionAttributes.state = 'GAME_STARTED';
+        sessionAttributes.round += 1;
         sessionAttributes.currentQuestion += 1;
         sessionAttributes.currentPlayer = 1;
         sessionAttributes.lastUtterance = speechText;

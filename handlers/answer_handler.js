@@ -22,7 +22,7 @@ module.exports = {
         const count = sessionAttributes.currentQuestion; //increments - if currently is qn 1 then is player1, qn 2 then is player2
         let questions = sessionAttributes.questions; //randomised array of qn numbers to be asked
         let points = sessionAttributes.score;
-        let qn = count;
+        let qn = strings[cat][questions[count]];
         let ans = '';
         let speechText = utils.checkAnswer(cat, qn, ans);
 
@@ -43,16 +43,16 @@ module.exports = {
             speechText = utils.endGame(numPlayers, points);
             sessionAttributes.state = 'ENDED';
         } else {
+            speechText += strings['SCORE'] + points[player];
             if (numPlayers === 2) { //duo
-                speechText += strings['SCORE'] + points[player];
                 if (player === 1) { //player2:
-                    speechText += strings['PLAYER_1'] + strings['AGAIN'] + strings['QUESTION_' + (sessionAttributes.currentQuestion).toString()] + strings.cat[questions[count]]
+                    speechText += strings['PLAYER_1'] + strings['AGAIN'] + strings['QUESTION_' + (sessionAttributes.currentQuestion).toString()] + strings[cat][questions[count]]
                 } else { //player1
-                    speechText += strings['PLAYER_2'] + strings['QUESTION_' + (sessionAttributes.currentQuestion).toString()] + strings.cat[questions[count]]
+                    speechText += strings['PLAYER_2'] + strings['QUESTION_' + (sessionAttributes.currentQuestion).toString()] + strings[cat][questions[count]]
                 }
                 sessionAttributes.player = utils.resetPlayer(player);
             } else { //solo
-                speechText += points[player] + strings['QUESTION_' + (sessionAttributes.currentQuestion + 2).toString()] + strings.cat[questions[count]];
+                speechText += strings['QUESTION_' + (sessionAttributes.currentQuestion + 2).toString()] + strings[cat][questions[count]];
             }
         }
 
@@ -63,7 +63,7 @@ module.exports = {
 
         return handlerInput.responseBuilder
         .speak(speechText)
-        .reprompt(strings.ANSWER_REPROMPT)
+        .reprompt(strings['ANSWER_REPROMPT'])
         .getResponse();
     }
 };
