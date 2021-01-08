@@ -71,16 +71,16 @@ function getId(slot) {
     }
 }
 
-function getAnswer() {
-
-}
-
-function checkAnswer(cat, ans, qn) {
+function getAnswer(cat, ans, qn) {
     let selection = answers.cat.qn;
     const correctAnswer = Object.keys(selection).filter(function(key) {
         return selection[key][0] === 1;
     })[0]; //e.g. 'A'
-    if (correctAnswer === ans) {
+    return correctAnswer;
+}
+
+function checkAnswer(cat, ans, qn) {
+    if (correctAnswer === getAnswer(cat, ans, qn)) {
         return strings['CORRECT'];
     } else {
         return strings['WRONG'] + answers.cat.qn.correctAnswer[1];
@@ -169,6 +169,7 @@ module.exports = {
     answers,
     getId,
     resetState,
+    getAnswer,
     checkAnswer,
     resetPlayer,
     endGame
