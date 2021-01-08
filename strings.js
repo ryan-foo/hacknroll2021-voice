@@ -4,7 +4,7 @@ const utils = require('./utils');
 
 module.exports = {
         // LAUNCH MESSAGES
-        GREETING: "Hello! Welcome to Quiz Lah, the best test of how Singaporean you truly are! Judge songs, Are you playing with one person, or two?",
+        GREETING: "Hello! Welcome to Quiz Lah, the best test of how Singaporean you truly are! Are you playing with one person, or two?",
         GREETING_REPROMPT: "Hi! To play Quiz Lah...",
 
         // GAME QUESTIONS

@@ -9,7 +9,7 @@ module.exports = {
     canHandle(handlerInput) {
         return handlerInput.requestEnvelope.request.type === 'LaunchRequest'
         || handlerInput.requestEnvelope.request.intent.name === 'AMAZON.StartOverIntent'
-        || handlerInput.requestEnvelope.request.intent.name === 'AMAZON.LaunchIntent';
+        // || handlerInput.requestEnvelope.request.intent.name === 'AMAZON.LaunchIntent'; // dont seem to exist
     },
 
     handle(handlerInput) {

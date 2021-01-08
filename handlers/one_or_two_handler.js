@@ -10,7 +10,7 @@ const { getId } = require('../utils');
 
 module.exports = {
     canHandle(handlerInput) {
-        return handlerInput.requestEnvelope.request.intent.name === 'AMAZON.OneOrTwoIntent';
+        return handlerInput.requestEnvelope.request.intent.name === 'OneOrTwoIntent';
     },
 
     handle(handlerInput) {
