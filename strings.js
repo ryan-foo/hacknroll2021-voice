@@ -49,7 +49,7 @@ module.exports = {
         // RESPONSE TO USERS
         SKIPPING: "Ok, the correct answer was ",
         SCORE: 'Your score is ', // string formatting here.
-        CORRECT: "Woohoo that's correct, you're doing great! ",
+        CORRECT: "Woohoo! That's correct, you're doing great! ",
         WRONG: "Sian you got it wrong! But nehmind at least now you know the answer. ",
         QUESTION: "Let's get to the next question.",
         ANSWER_REPROMPT: "Don't give up leh! You can just make any guess.",

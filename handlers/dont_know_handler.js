@@ -12,12 +12,13 @@ module.exports = {
   
       return handlerInput.requestEnvelope.request.type === 'IntentRequest'
         && (handlerInput.requestEnvelope.request.intent.name === 'DontKnowIntent'
-          || handlerInput.requestEnvelope.request.intent.name === 'AMAZON.StopIntent');
+          || handlerInput.requestEnvelope.request.intent.name === 'AMAZON.StopIntent'
+          || handlerInput.requestEnvelope.request.intent.name === 'AMAZON.FallBackIntent');
     },
     
     handle(handlerInput) {
       const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
-      const cats = ['SONG', 'MOVIE', 'PHRASES'];
+      const cats = ['SONG', 'MOVIE', 'PHRASE'];
       const slots = handlerInput.requestEnvelope.request.intent.slots.answer;
       const round = sessionAttributes.round;
       const cat = cats[round - 1]; //1 - Song, 2 - Movie, 3 - Phrases

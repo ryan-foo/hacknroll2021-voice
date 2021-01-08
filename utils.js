@@ -82,10 +82,12 @@ function resetState(sessionAttributes) {
     console.log(`Randomized questions: ${sessionAttributes.questions}`);
 }
 
+
+
 function getId(slot, round) {
     const ans = slot.resolutions.resolutionsPerAuthority[0].values[0].value.id;
     let res = {};
-    if (round === 1) {
+    if (round === 3) { // round 3 = PHRASE
         res.id = ans.charAt(ans.length-1);
         res.qn = ans.charAt(ans.length-3);
     }
@@ -196,6 +198,73 @@ function resetPlayer(player) {
 // it will be stored in an array. First element is the score.
 // second is the actual answer in text format. This will be given to answer handler etc
 // because you need that to form a proper response! "I.E wrong, the right answer is "frustrated""."
+
+const slots_test = {
+    "Answer": {
+        "name": "Answer",
+        "value": "home",
+        "resolutions": {
+            "resolutionsPerAuthority": [
+                {
+                    "authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.b2dd4717-f26f-4aa2-bfe6-b0626b05b18b.Answer",
+                    "status": {
+                        "code": "ER_SUCCESS_MATCH"
+                    },
+                    "values": [
+                        {
+                            "value": {
+                                "name": "home",
+                                "id": "SONG_1"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "confirmationStatus": "NONE",
+        "source": "USER",
+        "slotValue": {
+            "type": "Simple",
+            "value": "home",
+            "resolutions": {
+                "resolutionsPerAuthority": [
+                    {
+                        "authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.b2dd4717-f26f-4aa2-bfe6-b0626b05b18b.Answer",
+                        "status": {
+                            "code": "ER_SUCCESS_MATCH"
+                        },
+                        "values": [
+                            {
+                                "value": {
+                                    "name": "home",
+                                    "id": "SONG_1"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}
+
+console.log(getId(slots_test.Answer, 1));
+
+function getId(slot, round) {
+    const ans = slot.resolutions.resolutionsPerAuthority[0].values[0].value.id;
+    let res = {};
+    if (round === 3) {
+        res.id = ans.charAt(ans.length-1);
+        res.qn = ans.charAt(ans.length-3);
+    }
+    res.id = ans.charAt(ans.length-1);
+    return res;
+}
+
+
+
+
+
 
 module.exports = {
     answers,
