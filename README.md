@@ -1,6 +1,6 @@
 # QuizLah!
 
-![QuizLah Icon](https://github.com/ryan-foo/hacknroll2021-voice/blob/main/icons/icon_512_A2Z.png?raw=true)
+![QuizLah Icon](https://github.com/ryan-foo/hacknroll2021-voice/blob/main/icons/icon_108_A2Z.png?raw=true)
 
 ## Description
 
