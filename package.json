@@ -1,0 +1,33 @@
+{
+  "name": "quizlah",
+  "version": "1.0.0",
+  "description": "A quiz game, played with your voice",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryan-foo/hacknroll2021-voice.git"
+  },
+  "keywords": [
+    "Quiz",
+    "Trivia",
+    "Game",
+    "Singapore",
+    "Voice"
+  ],
+  "author": "Ryan Foo, Tam Zher Min, Tan Wee Keat, Xue Hui Tan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryan-foo/hacknroll2021-voice/issues"
+  },
+  "homepage": "https://github.com/ryan-foo/hacknroll2021-voice#readme",
+  "dependencies": {
+    "ask-sdk-core": "^2.10.1",
+    "ask-sdk-model": "^1.34.1"
+  }
+}
