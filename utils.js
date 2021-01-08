@@ -11,8 +11,8 @@ function resetState(sessionAttributes) {
     sessionAttributes.state = "INITIAL";
     sessionAttributes.players = 1;
     sessionAttributes.lastUtterance = "I haven't said anything yet -- it doesn't look like anything to me...";
-    sessionAttributes.currentQuestion = "0";
-    sessionAttributes.currentPlayer = "1";
+    sessionAttributes.currentQuestion = 0;
+    sessionAttributes.currentPlayer = 1;
     sessionAttributes.round = 0;
     sessionAttributes.score = [0, 0];
     sessionAttributes.questions = [[1, 2, 3, 4, 5], [1, 2, 3, 4, 5]];
@@ -46,7 +46,16 @@ function checkAnswer(cat, ans, qn) {
 
 function getRandomQuestion(array) {
     let qn = array.splice(Math.floor(Math.random()*array.length), 1);
-    return questions[qn];
+    return array[qn];
+}
+
+function resetPlayer(player) {
+    if (player === 0) {
+        player += 1;
+    } else {
+        player -= 1;
+    }
+    return player;
 }
 
 const answers = {
@@ -88,6 +97,7 @@ module.exports = {
     getId,
     resetState,
     checkAnswer,
-    getRandomQuestion
+    getRandomQuestion,
+    resetPlayer
 }
 
