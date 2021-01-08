@@ -24,9 +24,13 @@ module.exports = {
             1: 'What does this phrase mean in English? <audio> These are the options...'
         },
 
+        SKIPPING: "Ok, the correct answer was <>.",
+
         CANCEL_AND_STOP: "Thanks for playing. Have fun!",
 
         SORRY: "Sorry, that's not one of the options. ",
+
+        NOT_ANSWER: "That's not a valid answer. Don't know then say... ",
 
         HELP: "QUIZLAH", // TODO
         HELP_REPROMPT: "If you ever get stuck or lost in Quiz Lah and need to start over your experience say \"Alexa, start over.\"",

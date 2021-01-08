@@ -14,7 +14,7 @@ en-US.json should contain the final JSON interaction model with all answers (and
 state: ['INITIAL', 'GAME_STARTED', 'PLAY_AGAIN', 'ENDED']\
 player: 1 : [1,2]\
 lastUtterance: String\
-question: 1 : [1,2,3]\
+question: 1 : [1,2,3]\ Randomly selected in length\ 
 score: [10, 50]\
 currentPlayer: [1,2]\
 round: [1,2,3]: which category?

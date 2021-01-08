@@ -1,3 +1,4 @@
+const utils = require('../utils');
 const strings = require('../strings');
 
 /** Session Ended Request Handler
@@ -13,19 +14,19 @@ module.exports = {
       || (sessionAttributes.state === 'ENDED');
     },
     handle(handlerInput) {
-      //any cleanup logic goes here
-  
       let speechText;
   
       const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
 
-      // todo: cleanup.
-  
-      sessionAttributes.lastUtterance = speechText;
+      utils.resetState(sessionAttributes);
+
       handlerInput.attributesManager.setSessionAttributes(sessionAttributes);
-      
+      speechText = utils["EXIT"];
+
       return handlerInput.responseBuilder
       .speak(speechText)
       .getResponse();
     }
   };
+
+// DONE

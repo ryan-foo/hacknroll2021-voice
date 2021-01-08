@@ -1,3 +1,4 @@
+const utils = require('../utils');
 const strings = require('../strings');
 
 /** Yes Intent Handler
@@ -6,6 +7,7 @@ const strings = require('../strings');
  * If in 'PLAY_AGAIN', yes will send you to the 'GAME_STARTED' state.
  * Sample utterances: Yes, yes please, let's go, let's do this, alright.
  */
+
 module.exports = {
 
     canHandle(handlerInput) {
@@ -19,10 +21,8 @@ module.exports = {
       const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
 
       if (sessionAttributes.state == 'PLAY_AGAIN') {
-          // reset state
-
+        utils.resetState(sessionAttributes);
         speechText = strings['RESTART'] + strings['GREETING'];
-        sessionAttributes.state = 'INITIAL';
       }
 
       else {
@@ -37,3 +37,5 @@ module.exports = {
       .getResponse();
     }
   };
+
+  // DONE

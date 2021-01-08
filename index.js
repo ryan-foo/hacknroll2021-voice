@@ -15,6 +15,7 @@ exports.handler = async function (event, context) {
       .addRequestHandlers(
         require('./handlers/launch_handler'),
         require('./handlers/help_handler'),
+        require('./handlers/dont_know_handler'),
         require('./handlers/one_or_two_handler'),
         require('./handlers/answer_handler'),
         require('./handlers/no_handler'),
