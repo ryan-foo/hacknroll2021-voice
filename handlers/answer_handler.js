@@ -24,12 +24,12 @@ module.exports = {
         let points = sessionAttributes.score;
         let qn = strings[cat][questions[count]];
         let ans = '';
-        let speechText = utils.checkAnswer(cat, qn, ans);
 
         if (round === 1) { //phrase
-            qn = utils.getId(slots).qn; //cat's qn (1, 2, 3)
+            qn = utils.getId(slots, round).qn; //cat's qn (1, 2, 3)
         }
-        ans = utils.getId(slots).id; //player's ans ('A') for phrase, ('1') for movie and song
+        ans = utils.getId(slots, round).id; //player's ans ('A') for phrase, ('1') for movie and song
+        let speechText = utils.checkAnswer(cat, qn, ans);
 
         // add points
         if (cat === 'PHRASE') {
