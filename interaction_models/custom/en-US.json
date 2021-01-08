@@ -107,9 +107,45 @@
                     "name": "Answer",
                     "values": [
                         {
+                            "id": "MOVIE_5",
+                            "name": {
+                                "value": "money no enough",
+                                "synonyms": [
+                                    "no enough money"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "MOVIE_4",
+                            "name": {
+                                "value": "ilo ilo"
+                            }
+                        },
+                        {
+                            "id": "MOVIE_3",
+                            "name": {
+                                "value": "the ghosts must be crazy",
+                                "synonyms": [
+                                    "ghosts crazy"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "MOVIE_2",
+                            "name": {
+                                "value": "i not stupid",
+                                "synonyms": [
+                                    "not stupid"
+                                ]
+                            }
+                        },
+                        {
                             "id": "MOVIE_1",
                             "name": {
-                                "value": "ah boys to men"
+                                "value": "ah boys to men",
+                                "synonyms": [
+                                    "ah boy to man"
+                                ]
                             }
                         },
                         {
@@ -146,6 +182,33 @@
                                 "synonyms": [
                                     "this is home"
                                 ]
+                            }
+                        },
+                        {
+                            "id": "PHRASE_7.D",
+                            "name": {
+                                "value": "fancy",
+                                "synonyms": [
+                                    "expensive"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "PHRASE_7.C",
+                            "name": {
+                                "value": "cheap"
+                            }
+                        },
+                        {
+                            "id": "PHRASE_7.B",
+                            "name": {
+                                "value": "friendly"
+                            }
+                        },
+                        {
+                            "id": "PHRASE_7.A",
+                            "name": {
+                                "value": "reasonable"
                             }
                         },
                         {
