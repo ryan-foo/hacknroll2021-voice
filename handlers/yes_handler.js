@@ -1,3 +1,5 @@
+const strings = require('../strings');
+
 /** Yes Intent Handler
  * This intent handler will detect if a player says yes.
  * Depending on the game state, it may warn you, before asking you for confirmation to start a new quiz on the artist.
@@ -19,12 +21,12 @@ module.exports = {
       if (sessionAttributes.state == 'PLAY_AGAIN') {
           // reset state
 
-        speechText = requestAttributes.t('RESTART') + requestAttributes.t('GREETING');
-        sessionAttributes.state = 'ARTIST_PROMPT';
+        speechText = strings['RESTART'] + strings['GREETING'];
+        sessionAttributes.state = 'INITIAL';
       }
 
       else {
-          speechText = requestAttributes.t('YES_FALLBACK'); // Ask them to repeat since yes is not valid in other states.
+          speechText = strings['YES_FALLBACK']; // Ask them to repeat since yes is not valid in other states.
       }
 
       sessionAttributes.lastUtterance = speechText;
