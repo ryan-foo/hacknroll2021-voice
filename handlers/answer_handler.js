@@ -9,7 +9,7 @@ const utils = require('../utils');
 module.exports = {
     canHandle(handlerInput) {
         return handlerInput.requestEnvelope.request.type === 'IntentRequest'
-        && (handlerInput.requestEnvelope.request.intent.name === 'AMAZON.AnswerIntent')
+        && (handlerInput.requestEnvelope.request.intent.name === 'AnswerIntent')
     },
     handle(handlerInput) {
         const cats = ['SONG', 'MOVIE', 'PHRASE'];
