@@ -27,6 +27,9 @@ module.exports = {
             speechText = strings["HELP_RESTART"]
         }
 
+        sessionAttributes.lastUtterance = speechText;
+        handlerInput.attributesManager.setSessionAttributes(sessionAttributes);
+
         return handlerInput.responseBuilder
         .speak(speechText)
         .reprompt(repromptText)
