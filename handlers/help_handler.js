@@ -14,19 +14,18 @@ module.exports = {
 
     handle(handlerInput) {
 
-        let speechText, repromptText;
+        let speechText;
+        const repromptText = strings["HELP_REPROMPT"];
 
         const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
 
         // STATES: ['INITIAL', 'GAME_STARTED', 'PLAY_AGAIN', 'ENDED']
         if (sessionAttributes.state === "INITIAL") {
-
+            speechText = strings["HELP_INITIAL"]
         } else if (sessionAttributes.state === "GAME_STARTED") {
-
+            speechText = strings["HELP_GAMEPLAY"]
         } else if (sessionAttributes.state === "PLAY_AGAIN") {
-
-        } else if (sessionAttributes.state === "ENDED") {
-
+            speechText = strings["HELP_RESTART"]
         }
 
         return handlerInput.responseBuilder

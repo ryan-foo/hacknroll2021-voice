@@ -1,13 +1,12 @@
 // Localized content for en-* locales
 
 const utils = require('./utils');
+const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
 
 module.exports = {
         // LAUNCH MESSAGES
         GREETING: "Hello! Welcome to Quiz Lah, the best test of how Singaporean you truly are! Judge songs, Are you playing with one person, or two?",
         GREETING_REPROMPT: "Hi! To play Quiz Lah...",
-
-        PLAYER_NUM: "How many of you are playing? One or two?",
 
         // GAME QUESTIONS
         SONG: {
@@ -51,17 +50,10 @@ module.exports = {
         NOT_ANSWER: "That's not a valid answer. Don't know then say... ",
 
         // HELP MESSAGES
-        HELP_INITIAL: "QUIZLAH",
-        HELP_INITIAL_REPROMPT: "If you ever get stuck or lost in Quiz Lah and need to start over your experience say \"Alexa, start over.\"",
-
-        HELP_GAMEPLAY: "",
-        HELP_GAMEPLAY_REPROMPT: "",
-
-        HELP_RESTART: "",
-        HELP_RESTART_REPROMPT: "",
-
-        HELP_END: "",
-        HELP_END_REPROMPT: "",
+        HELP_INITIAL: "Quiz Lah is a game where you guess the correct answers to Singapore trivia such as songs and movies. You can choose how many players are playing, either one or two.",
+        HELP_GAMEPLAY: `You are playing Quiz Lah. Right now it is ${sessionAttributes.currentPlayer}'s turn. If you need to hear the question again, say 'Alexa, repeat question'`,
+        HELP_RESTART: "Thank you for playing Quiz Lah! We hope you have enjoyed the game. If you want to play again, say 'Alexa, start new game'",
+        HELP_REPROMPT: "If you ever get stuck or lost in Quiz Lah and need to start over, say 'Alexa, start over.'",
 
         // FALLBACKS
         YES_FALLBACK: "Sorry, I'm not sure what you're saying yes to. You can ask me to repeat what I said.",
