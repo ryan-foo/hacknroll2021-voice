@@ -17,10 +17,11 @@ module.exports = {
         },
 
         MOVIE: {
-            1: 'What is this movie? <audio />',
-            2: '',
-            3: '',
-            4: ''
+            1: '<audio src="https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Movies/001_ah_boys_to_men.mp3" /> What is the name of this clip?',
+            2: '<audio src="https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Movies/002_i_not_stupid.mp3" /> What is the name of this clip?',
+            3: '<audio src="https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Movies/003_the_ghosts_must_be_crazy.mp3" /> What is the name of this clip?',
+            4: '<audio src="https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Movies/004_ilo_ilo.mp3" /> What is the name of this clip?',
+            5: '<audio src="https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Movies/005_money_no_enough.mp3" /> What is the name of this clip?'
         },
 
         PHRASE: {
@@ -41,8 +42,8 @@ module.exports = {
         QUESTION_5: "Finally, test your knowledge of Singlish. We will play you a short audio clip of a Singlish phrase, and give you a few options. Pick the correct one to win! The phrase is ",
         QUESTION_6: ". Last question! Don't play play hor -- what's your guess? The phrase is ",
 
-        PLAYER_1: "Now it's player one's turn. ",
-        PLAYER_2: "Okay, player two, you're up. ",
+        PLAYER_1: "Now it's player one's turn ",
+        PLAYER_2: "Okay, player two, you're up ",
         AGAIN: "again",
 
         // RESPONSE TO USERS
