@@ -22,7 +22,7 @@ module.exports = {
         const count = sessionAttributes.currentQuestion; //increments - if currently is qn 1 then is player1, qn 2 then is player2
         let questions = sessionAttributes.questions; //randomised array of qn numbers to be asked
         let points = sessionAttributes.score;
-        let qn = '';
+        let qn = count;
         let ans = '';
         let speechText = utils.checkAnswer(cat, qn, ans);
 
@@ -32,8 +32,11 @@ module.exports = {
         ans = utils.getId(slots).id; //player's ans ('A') for phrase, ('1') for movie and song
 
         // add points
-        //KIV
-        points[player] += utils[cat][qn][ans];
+        if (cat === 'PHRASE') {
+            points[player] += utils.answers[cat][qn][ans];
+        } else {
+            points[player] += utils.answers[cat][ans];
+        }
 
         //check if end game
         if (round === 3) {

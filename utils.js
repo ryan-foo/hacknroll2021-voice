@@ -92,28 +92,27 @@ function getId(slot, round) {
 }
 
 function getAnswer(cat, qn) {
-    let ans = '';
-    let selection = '';
-    if (cat === 'PHRASE') {
-        selection = answers.cat.qn;
-        ans = Object.keys(selection).filter(function(key) {
-            return selection[key][0] === 1;
-        })[0]; //e.g. 'A'
-    } else {
-        //KIV
-        selection = answers.cat
-        ans = selection[qn]
-    }
-
+    // Only for phrases
+    let selection = answers.cat.qn;
+    return Object.keys(selection).filter(function(key) {
+        return selection[key][0] === 1;
+    })[0]; //e.g. 'A'
 }
 
 function checkAnswer(cat, ans, qn) {
-    const correctAnswer = getAnswer(cat, qn);
-    if (ans === correctAnswer) {
-        return strings['CORRECT'];
+    let correctAnswer = '';
+    let res = strings['CORRECT'];
+    if (cat === 'PHRASE') {
+        correctAnswer = getAnswer(cat, qn);
+        if (! ans === correctAnswer) {
+            res = strings['WRONG'] + answers.cat.qn.correctAnswer[1];
+        }
     } else {
-        return strings['WRONG'] + answers.cat.qn.correctAnswer[1];
+        if (! ans === qn) { //qn number and slot id
+            res = strings['WRONG'] + answers.cat.qn[1];
+        }
     }
+    return res;
 }
 
 function endGame(numPlayers, scores) {
