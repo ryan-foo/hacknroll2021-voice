@@ -25,17 +25,14 @@ module.exports = {
         console.log(`We have ${totalPlayers} players.`)
 
         // start game! handled by Xuehui.
-        let questions = [2,5,7,4,3,5]
 
         // ask the first question
         let speechText = strings["QUESTION_" + sessionAttributes.currentQuestion]
-        + strings["SONGS"][questions[0]];
-
-        const repromptText;
+        + strings["SONG"][sessionAttributes.questions[0]];
 
         return handlerInput.responseBuilder
         .speak(speechText)
-        .reprompt(repromptText)
+        .reprompt(speechText)
         .getResponse();
     }
 }

@@ -1,5 +1,5 @@
-const strings = require('../../strings');
-const utils = require('../../utils');
+const strings = require('../strings');
+const utils = require('../utils');
 
 /** Answer Intent Handler
  * The Answer Handler is responsible for handling any 'stop' or 'cancel' intents. It says an error message and resets the game state.
@@ -12,6 +12,7 @@ module.exports = {
         && (handlerInput.requestEnvelope.request.intent.name === 'AnswerIntent')
     },
     handle(handlerInput) {
+        
         const cats = ['SONG', 'MOVIE', 'PHRASES'];
         const slots = handlerInput.requestEnvelope.request.intent.slots.answer;
         const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
