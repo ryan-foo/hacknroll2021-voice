@@ -1,6 +1,6 @@
 # QuizLah!
 
-![QuizLah Icon](https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/325/674/datas/gallery.jpg)
+![QuizLah Icon](https://github.com/ryan-foo/hacknroll2021-voice/tree/main/icons/icon_512_A2Z.png)
 
 ## Description
 
