@@ -2,6 +2,7 @@
 // value: the score to add for the player.
 
 // for our own reference, we can comment the necessary out.
+const strings = require('./strings.js')
 
 const answers = {
     PHRASE:
@@ -79,24 +80,36 @@ function resetState(sessionAttributes) {
     console.log(`Randomized questions: ${sessionAttributes.questions}`);
 }
 
-function getId(slot) {
+function getId(slot, round) {
     const ans = slot.resolutions.resolutionsPerAuthority[0].values[0].value.id;
-    return {
-        id: ans.charAt(ans.length-1),
-        qn: ans.charAt(ans.length(-3))
+    let res = {};
+    if (round === 1) {
+        res.id = ans.charAt(ans.length-1);
+        res.qn = ans.charAt(ans.length-3);
     }
+    res.id = ans.charAt(ans.length-1);
+    return res;
 }
 
-function getAnswer(cat, ans, qn) {
-    let selection = answers.cat.qn;
-    const correctAnswer = Object.keys(selection).filter(function(key) {
-        return selection[key][0] === 1;
-    })[0]; //e.g. 'A'
-    return correctAnswer;
+function getAnswer(cat, qn) {
+    let ans = '';
+    let selection = '';
+    if (cat === 'PHRASE') {
+        selection = answers.cat.qn;
+        ans = Object.keys(selection).filter(function(key) {
+            return selection[key][0] === 1;
+        })[0]; //e.g. 'A'
+    } else {
+        //KIV
+        selection = answers.cat
+        ans = selection[qn]
+    }
+
 }
 
 function checkAnswer(cat, ans, qn) {
-    if (correctAnswer === getAnswer(cat, ans, qn)) {
+    const correctAnswer = getAnswer(cat, qn);
+    if (ans === correctAnswer) {
         return strings['CORRECT'];
     } else {
         return strings['WRONG'] + answers.cat.qn.correctAnswer[1];
@@ -107,8 +120,8 @@ function endGame(numPlayers, scores) {
     let reply = ''
     if (numPlayers === 1) {
         const players = ['Player 1', 'Player 2'];
-        const winningScore = Math.max(...arr);
-        const winner = arr.indexOf(winningScore);
+        const winningScore = Math.max(...scores);
+        const winner = scores.indexOf(winningScore);
         reply = strings['WIN'] + winningScore + strings['WINNER'] + players[winner] + strings['END'];
     } else {
         reply = strings['SINGLE_END'] + scores[0] + strings['WINNER'] + strings['END'];
@@ -190,4 +203,3 @@ module.exports = {
     resetPlayer,
     endGame
 }
-
