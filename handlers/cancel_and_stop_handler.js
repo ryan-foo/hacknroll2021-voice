@@ -1,4 +1,4 @@
-const utils = require('../utils');
+const utils = require('../strings');
 
 /** Cancel and Stop Intent Handler
  * The Answer Handler is responsible for handling any 'stop' or 'cancel' intents. It says an error message and resets the game state.
