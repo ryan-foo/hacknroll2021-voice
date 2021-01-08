@@ -10,7 +10,7 @@ const { getId } = require('../utils');
 
 module.exports = {
     canHandle(handlerInput) {
-        return handlerInput.requestEnvelope.request.intent.name === 'OneOrTwoIntent';
+        return handlerInput.requestEnvelope.request.intent.name === 'AMAZON.OneOrTwoIntent';
     },
 
     handle(handlerInput) {
@@ -18,27 +18,24 @@ module.exports = {
         const request = handlerInput.requestEnvelope.request;
         const slots = request.intent.slots;
         const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
-        const questions = sessionAttributes.questions;
-        let totalPlayers = parseInt(slots.oneOrTwo.value); // number of players
+
+        let totalPlayers = slots.oneOrTwo.value; // number of players
         sessionAttributes.players = totalPlayers;
 
         console.log(`We have ${totalPlayers} players.`)
 
-        // start game!
-        let speechText = '';
-        if (totalPlayers === 1) {
-            speechText = strings['START'] + strings['QUESTION_1'] + strings['SONG'][questions[0]];
-        } else {
-            speechText = strings['START'] + strings['PLAYER_1'] + strings['QUESTION_1'] + strings['SONG'][questions[0]];
-        }
-
+        // start game! handled by Xuehui.
+        sessionAttributes.state = 'STARTED';
         sessionAttributes.currentQuestion += 1;
+        sessionAttributes.currentPlayer = 1;
         sessionAttributes.lastUtterance = speechText;
-        handlerInput.attributesManager.setSessionAttributes(sessionAttributes);
+
+        // ask the first question
+        let speechText = strings["QUESTION_" + sessionAttributes.currentQuestion] + strings["SONG"][sessionAttributes.questions[0]];
 
         return handlerInput.responseBuilder
         .speak(speechText)
         .reprompt(speechText)
         .getResponse();
     }
-}
+}   
