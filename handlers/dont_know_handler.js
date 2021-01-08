@@ -1,4 +1,5 @@
 const strings = require('../strings');
+const utils = require('../utils');
 
 /** Don't Know Intent Handler
  * The Don't Know Handler is responsible when the player wants to skip the question.
@@ -10,7 +11,7 @@ module.exports = {
     canHandle(handlerInput) {
   
       return handlerInput.requestEnvelope.request.type === 'IntentRequest'
-        && (handlerInput.requestEnvelope.request.intent.name === 'AMAZON.DontKnowIntent'
+        && (handlerInput.requestEnvelope.request.intent.name === 'DontKnowIntent'
           || handlerInput.requestEnvelope.request.intent.name === 'AMAZON.StopIntent');
     },
     
