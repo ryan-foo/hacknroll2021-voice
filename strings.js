@@ -6,6 +6,8 @@ module.exports = {
         GREETING: "Hello! Welcome to Quiz Lah. Please select if you are playing alone or with a friend.",
         GREETING_REPROMPT: "Hi! To play Quiz Lah...",
 
+        PLAYER_SELECTION: "How many of you are playing? One or two?",
+
         SONG: {
             1: 'What is this song? <audio>',
             2: '',

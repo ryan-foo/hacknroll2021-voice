@@ -7,7 +7,6 @@ const utils = require('../utils');
 
 module.exports = {
     canHandle(handlerInput) {
-
         return handlerInput.requestEnvelope.request.type === 'LaunchRequest'
         || handlerInput.requestEnvelope.request.intent.name === 'AMAZON.StartOverIntent'
         || handlerInput.requestEnvelope.request.intent.name === 'AMAZON.LaunchIntent';
