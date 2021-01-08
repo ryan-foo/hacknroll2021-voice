@@ -31,10 +31,9 @@ module.exports = {
 
       // [1,2,1,2,1,2]
       // song 1, song 2, movie 1, movie 2, phrase 1, phrase 2
-      // answer: utils.answer.cat.questions[currentQuestion]
       // currentQuestion : index of the questions array
 
-      let correctAnswer = utils.answer.cat.questions[count][1];
+      let correctAnswer = answers[cat][questions[count]][1];
       
       let points = sessionAttributes.score;
       let speechText = strings['SKIPPING'] + correctAnswer + '.';

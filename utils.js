@@ -68,6 +68,11 @@ const answers = {
     }
 }
 
+let questions = [3,2,1,2,1,2];
+let count = 1;
+let correctAnswer = answers["SONG"][questions[count]][1];
+console.log(correctAnswer);
+
 function resetState(sessionAttributes) {
     sessionAttributes.state = "INITIAL";
     sessionAttributes.players = 1;
