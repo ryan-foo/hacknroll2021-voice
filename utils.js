@@ -70,7 +70,7 @@ function resetState(sessionAttributes) {
     sessionAttributes.players = 1;
     sessionAttributes.lastUtterance = "I haven't said anything yet -- it doesn't look like anything to me...";
     sessionAttributes.currentQuestion = 0;
-    sessionAttributes.currentPlayer = 1;
+    sessionAttributes.currentPlayer = 0;
     sessionAttributes.round = 0;
     sessionAttributes.score = [0, 0];
     sessionAttributes.questions = initializeRandomQuestions(2);
@@ -82,8 +82,8 @@ function resetState(sessionAttributes) {
 function getId(slot) {
     const ans = slot.resolutions.resolutionsPerAuthority[0].values[0].value.id;
     return {
-        id: ans[-1],
-        qn: ans[-3]
+        id: ans.charAt(ans.length-1),
+        qn: ans.charAt(ans.length(-3))
     }
 }
 
