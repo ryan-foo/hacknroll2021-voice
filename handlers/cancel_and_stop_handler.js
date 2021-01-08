@@ -6,7 +6,6 @@ const strings = require('../strings');
 
 module.exports = {
     canHandle(handlerInput) {
-  
       return handlerInput.requestEnvelope.request.intent.name === 'AMAZON.CancelIntent';
     },
     
