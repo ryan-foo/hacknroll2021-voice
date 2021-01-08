@@ -8,7 +8,7 @@ const utils = require('../utils');
 
 module.exports = {
     canHandle(handlerInput) {
-      return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+        return handlerInput.requestEnvelope.request.type === 'IntentRequest'
         && (handlerInput.requestEnvelope.request.intent.name === 'AnswerIntent')
     },
     handle(handlerInput) {
@@ -58,4 +58,4 @@ module.exports = {
         .reprompt(strings.ANSWER_REPROMPT)
         .getResponse();
     }
-  };
+};
