@@ -12,7 +12,6 @@ module.exports = {
         && (handlerInput.requestEnvelope.request.intent.name === 'AnswerIntent')
     },
     handle(handlerInput) {
-        
         const cats = ['SONG', 'MOVIE', 'PHRASES'];
         const slots = handlerInput.requestEnvelope.request.intent.slots.answer;
         const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
@@ -22,7 +21,7 @@ module.exports = {
         const ans = utils.getId(slots).id; //player's ans ('A')
         const player = sessionAttributes.currentPlayer - 1; //0 or 1
         const numPlayers = sessionAttributes.player; //1 or 2
-        // const count = sessionAttributes.currentQuestion; //increments - if currently is qn 1 then is player1, qn 2 then is player2
+        const count = sessionAttributes.currentQuestion; //increments - if currently is qn 1 then is player1, qn 2 then is player2
         let questions = sessionAttributes.questions; //randomised array of qn numbers to be asked
         let points = sessionAttributes.score;
         let speechText = utils.checkAnswer(cat, qn, ans);
@@ -38,15 +37,15 @@ module.exports = {
             if (numPlayers === 2) { //duo
                 speechText += strings['SCORE'] + points[player];
                 if (player === 1) { //player2:
-                    speechText += strings['PLAYER_1'] + strings['AGAIN'] + strings['QUESTION_' + (sessionAttributes.currentQuestion).toString()] + strings.cat[questions[count - 1]]
+                    speechText += strings['PLAYER_1'] + strings['AGAIN'] + strings['QUESTION_' + (sessionAttributes.currentQuestion).toString()] + strings.cat[questions[count]]
                 } else { //player1
-                    speechText += strings['PLAYER_2'] + strings['QUESTION_' + (sessionAttributes.currentQuestion).toString()] + strings.cat[questions[count - 1]]
+                    speechText += strings['PLAYER_2'] + strings['QUESTION_' + (sessionAttributes.currentQuestion).toString()] + strings.cat[questions[count]]
                 // strings['PLAYER_2'] + strings['QUESTION_2'] // number based on cat
                 }
                 // speechText += strings['QUESTION_' + (sessionAttributes.currentQuestion).toString()] + strings.cat[questions[count - 1]]; //[nextQuestion - 1];
                 sessionAttributes.player = utils.resetPlayer(player);
             } else { //solo
-                speechText += points[player] + strings['QUESTION_' + (sessionAttributes.currentQuestion + 2).toString()] + strings.cat[questions[count - 1]];
+                speechText += points[player] + strings['QUESTION_' + (sessionAttributes.currentQuestion + 2).toString()] + strings.cat[questions[count]];
             }
         }
 

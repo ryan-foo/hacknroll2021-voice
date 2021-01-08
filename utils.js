@@ -49,10 +49,6 @@ const answers = {
     }
 }
 
-function getId(slot) {
-    return slot.resolutions.resolutionsPerAuthority[0].values[0].value.id;
-}
-
 function resetState(sessionAttributes) {
     sessionAttributes.state = "INITIAL";
     sessionAttributes.players = 1;
@@ -89,6 +85,19 @@ function checkAnswer(cat, ans, qn) {
     } else {
         return strings['WRONG'] + answers.cat.qn.correctAnswer[1];
     }
+}
+
+function endGame(numPlayers, scores) {
+    let reply = ''
+    if (numPlayers === 1) {
+        const players = ['Player 1', 'Player 2'];
+        const winningScore = Math.max(...arr);
+        const winner = arr.indexOf(winningScore);
+        reply = strings['WIN'] + winningScore + strings['WINNER'] + players[winner] + strings['END'];
+    } else {
+        reply = strings['SINGLE_END'] + scores[0] + strings['WINNER'] + strings['END'];
+    }
+    return reply;
 }
 
 /**
@@ -137,10 +146,10 @@ function initializeRandomQuestions(n) {
 // console.log(initializeRandomQuestions(2));
 
 
-function getRandomQuestion(array) {
-    let qn = array.splice(Math.floor(Math.random()*array.length), 1);
-    return array[qn];
-}
+// function getRandomQuestion(array) {
+//     let qn = array.splice(Math.floor(Math.random()*array.length), 1);
+//     return array[qn];
+// }
 
 function resetPlayer(player) {
     if (player === 0) {
@@ -150,8 +159,6 @@ function resetPlayer(player) {
     }
     return player;
 }
-
-// Random Question
 
 // The system:
 // it will be stored in an array. First element is the score.
@@ -163,7 +170,7 @@ module.exports = {
     getId,
     resetState,
     checkAnswer,
-    getRandomQuestion,
-    resetPlayer
+    resetPlayer,
+    endGame
 }
 

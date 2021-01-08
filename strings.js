@@ -27,15 +27,17 @@ module.exports = {
             1: '<INSERT AUDIO HERE> These are the options...'
         },
 
-        QUESTION_1: "Alright! Category one -- guess the song from a short clip. Here's the song: ",
-        QUESTION_2: "Okay, here's the song: ",
+        START: "Alright, let's start!",
+        QUESTION_1: "Category one -- guess the song from a short clip. Here's the song: ",
+        QUESTION_2: ". Heres the next song: ",
         QUESTION_3: "New category! How well do you know Singaporean movies? Here's a clip, tell us the movie: ",
-        QUESTION_4: "You know the drill. Guess the movie: ", 
+        QUESTION_4: ". You know the drill. Guess the movie: ",
         QUESTION_5: "Finally, test your knowledge of Singlish. We will play you a short audio clip of a Singlish phrase, and give you a few options. Pick the correct one to win! The phrase is ",
-        QUESTION_6: "Last question! Don't play play hor -- what's your guess? The phrase is ",
+        QUESTION_6: ". Last question! Don't play play hor -- what's your guess? The phrase is ",
 
-        PLAYER_1: "Okay, now it's player one's turn. ",
-        PLAYER_2: "Okay, player two, you're up. ",
+        PLAYER_1: "Now it's player one's turn ",
+        PLAYER_2: "Okay, player two, you're up",
+        AGAIN: "again",
 
         // RESPONSE TO USERS
         SKIPPING: "Ok, the correct answer was <>.",
@@ -45,6 +47,10 @@ module.exports = {
         QUESTION: "Let's get to the next question!",
         ANSWER_REPROMPT: "Don't give up leh! You can just make any guess.",
         CANCEL_AND_STOP: "Thanks for playing. Have fun!",
+        WIN: "Huat ah, we have a winner with a score of ",
+        WINNER: ". Congrats",
+        SINGLE_END: "Huat ah, you have reached the end of the game with a score of ",
+        END: "! Thank you for playing QuizLah, have a great day ahead!",
 
         SORRY: "Sorry, that's not one of the options. ",
         NOT_ANSWER: "That's not a valid answer. Don't know then say... ",
