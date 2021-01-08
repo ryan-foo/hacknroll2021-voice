@@ -3,28 +3,38 @@
 const utils = require('./utils');
 
 module.exports = {
-        GREETING: "Hello! Welcome to Quiz Lah. Please select if you are playing alone or with a friend.",
+        GREETING: "Hello! Welcome to Quiz Lah, the best test of how Singaporean you truly are! Judge songs, Are you playing with one person, or two?",
         GREETING_REPROMPT: "Hi! To play Quiz Lah...",
 
         PLAYER_NUM: "How many of you are playing? One or two?",
 
         SONG: {
-            1: 'What is this song? <audio src = "https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Songs/001_home.mp3">',
-            2: '',
+            1: "<audio src='https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Songs/001_home.mp3'/>",
+            2: '<audio src="soundbank://soundlibrary/alarms/chimes_and_bells/chimes_bells_06"/>',
             3: '',
             4: ''
         },
 
         MOVIE: {
-            1: 'What is this movie? <audio>',
+            1: 'What is this movie?',
             2: '',
             3: '',
             4: ''
         },
 
         PHRASE: {
-            1: 'What does this phrase mean in English? <audio> These are the options...'
+            1: '<INSERT AUDIO HERE> These are the options...'
         },
+
+        QUESTION_1: "Alright! Category one -- guess the song from a short clip. Here's the song: ",
+        QUESTION_2: "Here's the song: ",
+        QUESTION_3: "New category! ",
+        QUESTION_4: "", 
+        QUESTION_5: "Finally, test your knowledge of Singlish. We will play you a short audio clip of a Singlish phrase, and give you a few options. Pick the correct one to win! The phrase is ",
+        QUESTION_6: "",
+
+        PLAYER_1: "Okay, now it's player one's turn. ",
+        PLAYER_2: "Okay, player two, you're up. ",
 
         SKIPPING: "Ok, the correct answer was <>.",
         SCORE: `Your score is.`, // string formatting here.

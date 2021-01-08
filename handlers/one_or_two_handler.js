@@ -6,6 +6,7 @@
  */
 
 const strings = require('../strings');
+const { getId } = require('../utils');
 
 module.exports = {
     canHandle(handlerInput) {
@@ -14,8 +15,23 @@ module.exports = {
 
     handle(handlerInput) {
 
-        const speechText = strings["PLAYER_NUM"];
-        const repromptText = strings["SORRY"] + strings["PLAYER_NUM"];
+        const request = handlerInput.requestEnvelope.request;
+        const slots = request.intent.slots;
+        const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+
+        let totalPlayers = slots.oneOrTwo.value; // number of players
+        sessionAttributes.players = totalPlayers;
+
+        console.log(`We have ${totalPlayers} players.`)
+
+        // start game! handled by Xuehui.
+        let questions = [2,5,7,4,3,5]
+
+        // ask the first question
+        let speechText = strings["QUESTION_" + sessionAttributes.currentQuestion]
+        + strings["SONGS"][questions[0]];
+
+        const repromptText;
 
         return handlerInput.responseBuilder
         .speak(speechText)

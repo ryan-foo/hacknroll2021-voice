@@ -9,7 +9,7 @@ function getId(slot) {
 
 function resetState(sessionAttributes) {
     sessionAttributes.state = "INITIAL";
-    sessionAttributes.player = "1";
+    sessionAttributes.players = 1;
     sessionAttributes.lastUtterance = "I haven't said anything yet -- it doesn't look like anything to me...";
     sessionAttributes.currentQuestion = "0";
     sessionAttributes.currentPlayer = "1";
