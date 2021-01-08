@@ -35,15 +35,15 @@ module.exports = {
         },
 
         START: "Alright, let's start! ",
-        QUESTION_1: "Category one -- guess the song from a short clip. Here's the song: ",
+        QUESTION_1: ". Category one -- guess the song from a short clip. Here's the song: ",
         QUESTION_2: ". Heres the next song: ",
         QUESTION_3: "New category! How well do you know Singaporean movies? Here's a clip, tell us the movie: ",
         QUESTION_4: ". You know the drill. Guess the movie: ",
         QUESTION_5: "Finally, test your knowledge of Singlish. We will play you a short audio clip of a Singlish phrase, and give you a few options. Pick the correct one to win! The phrase is ",
         QUESTION_6: ". Last question! Don't play play hor -- what's your guess? The phrase is ",
 
-        PLAYER_1: "Now it's player one's turn ",
-        PLAYER_2: "Okay, player two, you're up",
+        PLAYER_1: "Now it's player one's turn. ",
+        PLAYER_2: "Okay, player two, you're up. ",
         AGAIN: "again",
 
         // RESPONSE TO USERS

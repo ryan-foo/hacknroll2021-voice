@@ -8,27 +8,35 @@ const utils = require('../utils');
 
 module.exports = {
     canHandle(handlerInput) {
-      return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+        return handlerInput.requestEnvelope.request.type === 'IntentRequest'
         && (handlerInput.requestEnvelope.request.intent.name === 'AnswerIntent')
     },
     handle(handlerInput) {
         const cats = ['SONG', 'MOVIE', 'PHRASE'];
-        const slots = handlerInput.requestEnvelope.request.intent.slots.answer;
+        const slots = handlerInput.requestEnvelope.request.intent.slots['Answer'];
         const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
         const round = sessionAttributes.round;
         const cat = cats[round - 1]; //1 - Song, 2 - Movie, 3 - Phrases
-
-        const qn = utils.getId(slots).qn; //cat's qn (1, 2, 3)
-        const ans = utils.getId(slots).id; //player's ans ('A')
         const player = sessionAttributes.currentPlayer - 1; //0 or 1
         const numPlayers = sessionAttributes.player; //1 or 2
         const count = sessionAttributes.currentQuestion; //increments - if currently is qn 1 then is player1, qn 2 then is player2
         let questions = sessionAttributes.questions; //randomised array of qn numbers to be asked
         let points = sessionAttributes.score;
+        let qn = count;
+        let ans = '';
         let speechText = utils.checkAnswer(cat, qn, ans);
 
+        if (round === 1) { //phrase
+            qn = utils.getId(slots).qn; //cat's qn (1, 2, 3)
+        }
+        ans = utils.getId(slots).id; //player's ans ('A') for phrase, ('1') for movie and song
+
         // add points
-        points[player] += utils[cat][qn][ans];
+        if (cat === 'PHRASE') {
+            points[player] += utils.answers[cat][qn][ans];
+        } else {
+            points[player] += utils.answers[cat][ans];
+        }
 
         //check if end game
         if (round === 3) {
@@ -58,4 +66,4 @@ module.exports = {
         .reprompt(strings.ANSWER_REPROMPT)
         .getResponse();
     }
-  };
+};
