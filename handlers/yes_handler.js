@@ -1,3 +1,4 @@
+const utils = require('../utils');
 const strings = require('../strings');
 
 /** Yes Intent Handler
@@ -19,7 +20,7 @@ module.exports = {
       const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
 
       if (sessionAttributes.state == 'PLAY_AGAIN') {
-          // reset state
+        utils.resetState(sessionAttributes);
 
         speechText = strings['RESTART'] + strings['GREETING'];
         sessionAttributes.state = 'INITIAL';
@@ -37,3 +38,5 @@ module.exports = {
       .getResponse();
     }
   };
+
+  // DONE
