@@ -7,10 +7,10 @@ module.exports = {
     PHRASE:
     {
         1: {
-            A: 1,
-            B: 0,
-            C: 0,
-            D: 0
+            A: 1, // frustrated
+            B: 0, // sad
+            C: 0, // surprised
+            D: 0 // entertained
         },
         2: {
             A: 0,
