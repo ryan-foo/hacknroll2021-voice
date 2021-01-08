@@ -60,12 +60,20 @@
                         "start game",
                         "new game",
                         "start",
-                        "start new game"
+                        "start new game",
+                        "restart",
+                        "restart game",
+                        "start over"
                     ]
                 },
                 {
                     "name": "AMAZON.RepeatIntent",
-                    "samples": []
+                    "samples": [
+                        "repeat",
+                        "repeat question",
+                        "replay",
+                        "replay question"
+                    ]
                 },
                 {
                     "name": "AMAZON.YesIntent",

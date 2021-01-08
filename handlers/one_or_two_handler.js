@@ -31,7 +31,7 @@ module.exports = {
             speechText = strings['START'] + strings['PLAYER_1'] + strings['QUESTION_1'] + strings['SONG'][questions[0]];
         }
 
-        sessionAttributes.state = 'STARTED';
+        sessionAttributes.state = 'GAME_STARTED';
         sessionAttributes.currentQuestion += 1;
         sessionAttributes.currentPlayer = 1;
         sessionAttributes.lastUtterance = speechText;

@@ -8,8 +8,8 @@ const utils = require('../utils');
 
 module.exports = {
     canHandle(handlerInput) {
-      return handlerInput.requestEnvelope.request.type === 'IntentRequest'
-        && (handlerInput.requestEnvelope.request.intent.name === 'AnswerIntent')
+        return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+        && (handlerInput.requestEnvelope.request.intent.name === 'AMAZON.AnswerIntent')
     },
     handle(handlerInput) {
         const cats = ['SONG', 'MOVIE', 'PHRASE'];
@@ -63,4 +63,4 @@ module.exports = {
         .reprompt(strings.ANSWER_REPROMPT)
         .getResponse();
     }
-  };
+};
