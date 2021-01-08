@@ -1,4 +1,5 @@
 const strings = require('../strings');
+const { resetState } = require('../utils');
 
 /** Cancel and Stop Intent Handler
  * The Cancel and Stop Handler is responsible for handling any 'stop' or 'cancel' intents. It says an error message and resets the game state.
@@ -13,6 +14,7 @@ module.exports = {
       const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
   
       const speechText = strings["CANCEL_AND_STOP"];
+      resetState(sessionAttributes);
   
       sessionAttributes.lastUtterance = speechText;
       handlerInput.attributesManager.setSessionAttributes(sessionAttributes);
@@ -22,5 +24,3 @@ module.exports = {
       .getResponse();
     }
   };
-
-  // TODO: carry on after pushing

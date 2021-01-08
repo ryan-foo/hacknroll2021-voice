@@ -9,11 +9,11 @@ module.exports = {
 
         // GAME QUESTIONS
         SONG: {
-            1: "<audio src='https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Songs/001_home.mp3' />",
-            2: "<audio src='https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Songs/002_save_my_world.mp3' />",
-            3: "<audio src='https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Songs/003_singapore_town.mp3' />",
-            4: "<audio src='https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Songs/004_i_wouldnt_know_any_better_than_you.mp3' />",
-            5: "<audio src='https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Songs/005_room_at_the_table.mp3' />"
+            1: "<audio src='https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Songs/001_home.mp3' /> What is the name of the song?",
+            2: "<audio src='https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Songs/002_save_my_world.mp3' /> What is the name of the song?",
+            3: "<audio src='https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Songs/003_singapore_town.mp3' /> What is the name of the song?",
+            4: "<audio src='https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Songs/004_i_wouldnt_know_any_better_than_you.mp3' /> What is the name of the song?",
+            5: "<audio src='https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Songs/005_room_at_the_table.mp3' /> What is the name of the song?"
         },
 
         MOVIE: {
@@ -24,7 +24,13 @@ module.exports = {
         },
 
         PHRASE: {
-            1: '<INSERT AUDIO HERE> These are the options...'
+            1: '<audio src="https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Phrases/001_walau_eh.mp3" /> Which of the following options is the most appropriate translation?',
+            2: '<audio src="https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Phrases/002_jialat.mp3" /> Which of the following options is the most appropriate translation?',
+            3: '<audio src="https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Phrases/003_eeeee.mp3" /> Which of the following options is the most appropriate translation?',
+            4: '<audio src="https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Phrases/004_chey.mp3" /> Which of the following options is the most appropriate translation?',
+            5: '<audio src="https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Phrases/005_choy.mp3" /> Which of the following options is the most appropriate translation?',
+            6: '<audio src="https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Phrases/006_dey.mp3" /> Which of the following options is the most appropriate translation?',
+            7: '<audio src="https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Phrases/007_atas.mp3" /> Which of the following options is the most appropriate translation?'
         },
 
         START: "Alright, let's start!",
@@ -40,7 +46,7 @@ module.exports = {
         AGAIN: "again",
 
         // RESPONSE TO USERS
-        SKIPPING: "Ok, the correct answer was <>.",
+        SKIPPING: "Ok, the correct answer was ",
         SCORE: `Your score is.`, // string formatting here.
         CORRECT: "Woohoo that's correct, you're doing great!",
         WRONG: "Sian you got it wrong! But nehmind at least now you know the answer.",

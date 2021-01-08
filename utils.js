@@ -13,24 +13,40 @@ const answers = {
             D: [0, "entertained"] // entertained
         },
         2: {
-            A: [0, ""],
-            B: [1, ""],
-            C: [0, ""],
-            D: [0, ""]
+            A: [0, "delicious"],
+            B: [1, "terrible"],
+            C: [0, "tired"],
+            D: [0, "nervous"]
         },
         3: {
-            A: [0, ""]
+            A: [0, "interesting"],
+            B: [0, "one"],
+            C: [0, "entertaining"],
+            D: [1, "disgusting"]
         },
         4: {
-            A: [0, ""]
-
+            A: [0, "awesome"],
+            B: [0, "enlightening"],
+            C: [1, "disappointed"],
+            D: [0, "nervous"]
         },
         5: {
-            A: [0, ""]
-
+            A: [0, "delicious"],
+            B: [1, "terrible"],
+            C: [0, "tired"],
+            D: [0, "nervous"]
         },
         6: {
-            A: [0, ""]
+            A: [0, "delicious"],
+            B: [1, "terrible"],
+            C: [0, "tired"],
+            D: [0, "nervous"]
+        },
+        7: {
+            A: [0, "delicious"],
+            B: [1, "terrible"],
+            C: [0, "tired"],
+            D: [0, "nervous"]
         }
     },
 
@@ -71,16 +87,16 @@ function getId(slot) {
     }
 }
 
-function getAnswer() {
-
-}
-
-function checkAnswer(cat, ans, qn) {
+function getAnswer(cat, ans, qn) {
     let selection = answers.cat.qn;
     const correctAnswer = Object.keys(selection).filter(function(key) {
         return selection[key][0] === 1;
     })[0]; //e.g. 'A'
-    if (correctAnswer === ans) {
+    return correctAnswer;
+}
+
+function checkAnswer(cat, ans, qn) {
+    if (correctAnswer === getAnswer(cat, ans, qn)) {
         return strings['CORRECT'];
     } else {
         return strings['WRONG'] + answers.cat.qn.correctAnswer[1];
@@ -169,6 +185,7 @@ module.exports = {
     answers,
     getId,
     resetState,
+    getAnswer,
     checkAnswer,
     resetPlayer,
     endGame
