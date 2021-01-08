@@ -18,7 +18,7 @@ function resetState(sessionAttributes) {
     console.log("I reset the state! :)");
 }
 
-// random question
+// Random Question
 
 // The system:
 // it will be stored in an array. First element is the score.

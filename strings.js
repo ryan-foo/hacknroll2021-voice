@@ -29,6 +29,7 @@ module.exports = {
         },
 
         SKIPPING: "Ok, the correct answer was <>.",
+        SCORE: `Your score is ${sessionAttributes.score[sessionAttributes.currentPlayer]}`, // string formatting here.
 
         CANCEL_AND_STOP: "Thanks for playing. Have fun!",
 

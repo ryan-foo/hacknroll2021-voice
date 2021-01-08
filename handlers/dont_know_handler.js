@@ -16,12 +16,16 @@ module.exports = {
     
     handle(handlerInput) {
       const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+
+      // increment all the necessary, here...
   
-      const speechText = strings["SKIPPING"];
-  
-      sessionAttributes.state = '';
-      sessionAttributes.currQuestion = 0;
-  
+
+      // do the End the Game check here...
+
+
+      // build the response accordingly here...
+ 
+      const speechText = strings["SKIPPING"] + strings["SCORE"];
       sessionAttributes.lastUtterance = speechText;
       handlerInput.attributesManager.setSessionAttributes(sessionAttributes);
   
