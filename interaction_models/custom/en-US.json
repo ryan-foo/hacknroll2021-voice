@@ -29,7 +29,7 @@
                     "slots": [
                         {
                             "name": "Answer",
-                            "type": "AMAZON.NUMBER"
+                            "type": "Answer"
                         }
                     ],
                     "samples": [
@@ -73,6 +73,24 @@
                 },
                 {
                     "name": "AMAZON.NoIntent",
+                    "samples": []
+                },
+                {
+                    "name": "OneOrTwoIntent",
+                    "slots": [
+                        {
+                            "name": "oneOrTwo",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "{oneOrTwo} of us",
+                        "{oneOrTwo} players",
+                        "{oneOrTwo}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
                     "samples": []
                 }
             ],

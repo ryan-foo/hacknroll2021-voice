@@ -9,7 +9,7 @@ module.exports = {
         PLAYER_NUM: "How many of you are playing? One or two?",
 
         SONG: {
-            1: 'What is this song? <audio>',
+            1: 'What is this song? <audio src = "https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Songs/001_home.mp3">',
             2: '',
             3: '',
             4: ''
@@ -27,7 +27,7 @@ module.exports = {
         },
 
         SKIPPING: "Ok, the correct answer was <>.",
-        SCORE: `Your score is ${sessionAttributes.score[sessionAttributes.currentPlayer]}`, // string formatting here.
+        SCORE: `Your score is.`, // string formatting here.
         CORRECT: "Woohoo that's correct, you're doing great!",
         WRONG: "Sian you got it wrong! But nehmind at least now you know the answer.",
         QUESTION: "Let's get to the next question!",
