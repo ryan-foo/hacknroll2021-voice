@@ -12,11 +12,12 @@ module.exports = {
         && (handlerInput.requestEnvelope.request.intent.name === 'AnswerIntent')
     },
     handle(handlerInput) {
-        const cats = ['SONG', 'MOVIE', 'PHRASES'];
+        const cats = ['SONG', 'MOVIE', 'PHRASE'];
         const slots = handlerInput.requestEnvelope.request.intent.slots.answer;
         const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
         const round = sessionAttributes.round;
         const cat = cats[round - 1]; //1 - Song, 2 - Movie, 3 - Phrases
+// 
         const qn = utils.getId(slots).qn; //cat's qn (1, 2, 3)
         const ans = utils.getId(slots).id; //player's ans ('A')
         const player = sessionAttributes.currentPlayer - 1; //0 or 1
