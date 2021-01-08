@@ -135,7 +135,8 @@
                             "name": {
                                 "value": "i not stupid",
                                 "synonyms": [
-                                    "not stupid"
+                                    "not stupid",
+                                    "xiao hai bu ben"
                                 ]
                             }
                         },
@@ -178,10 +179,7 @@
                         {
                             "id": "SONG_1",
                             "name": {
-                                "value": "home",
-                                "synonyms": [
-                                    "this is home"
-                                ]
+                                "value": "home"
                             }
                         },
                         {
