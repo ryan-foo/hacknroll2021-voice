@@ -33,7 +33,7 @@ module.exports = {
             7: '<audio src="https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Phrases/007_atas.mp3" /> Which of the following options is the most appropriate translation?'
         },
 
-        START: "Alright, let's start!",
+        START: "Alright, let's start! ",
         QUESTION_1: "Category one -- guess the song from a short clip. Here's the song: ",
         QUESTION_2: ". Heres the next song: ",
         QUESTION_3: "New category! How well do you know Singaporean movies? Here's a clip, tell us the movie: ",

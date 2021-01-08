@@ -80,7 +80,7 @@
                     "slots": [
                         {
                             "name": "oneOrTwo",
-                            "type": "AMAZON.NUMBER"
+                            "type": "OneOrTwo"
                         }
                     ],
                     "samples": [
@@ -252,7 +252,7 @@
                         {
                             "id": "PHRASE_3.B",
                             "name": {
-                                "value": "one"
+                                "value": "exciting"
                             }
                         },
                         {
@@ -310,6 +310,21 @@
                             "id": "PHRASE_1.A",
                             "name": {
                                 "value": "frustrated"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "OneOrTwo",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "two"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "one"
                             }
                         }
                     ]
