@@ -137,12 +137,14 @@ function endGame(numPlayers, scores) {
  * @param {Array} array 
  */
 
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
+function shuffleArray(array_len) {
+    let array = []
+    for (let i = 1; i < array_len + 1; i++) {
+        array.push(i);
+    };
+    let res = array.sort(() => 0.5 - Math.random())
+    
+    return res;
 }
 
 /**
@@ -166,9 +168,9 @@ console.log(Object.keys(answers.SONG).length);
 
 function initializeRandomQuestions(n) {
     let questionsArray = [];
-    let shuffledSongArray = shuffleArray([...Array(Object.keys(answers.SONG).length).keys()]);
-    let shuffledMovieArray = shuffleArray([...Array(Object.keys(answers.MOVIE).length).keys()]);
-    let shuffledPhraseArray = shuffleArray([...Array(Object.keys(answers.PHRASE).length).keys()]);
+    let shuffledSongArray = shuffleArray(Object.keys(answers.SONG).length);
+    let shuffledMovieArray = shuffleArray(Object.keys(answers.MOVIE).length);
+    let shuffledPhraseArray = shuffleArray(Object.keys(answers.PHRASE).length);
     return questionsArray.concat(shuffledSongArray.slice(0, n), shuffledMovieArray.slice(0, n),
         shuffledPhraseArray.slice(0, n));
 }
