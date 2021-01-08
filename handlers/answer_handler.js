@@ -12,6 +12,7 @@ module.exports = {
         && (handlerInput.requestEnvelope.request.intent.name === 'AnswerIntent')
     },
     handle(handlerInput) {
+        
         const cats = ['SONG', 'MOVIE', 'PHRASES'];
         const slots = handlerInput.requestEnvelope.request.intent.slots.answer;
         const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
@@ -38,7 +39,7 @@ module.exports = {
   ``    }
         const nextQuestion = utils.getRandomQuestion(questions);
         speechText += strings.SCORE; //-1 if the numbers are not the index
-
+ 
         // update sessionAttributes
         sessionAttributes.currentQuestion += 1;
         // sessionAttributes.questions = questions;
