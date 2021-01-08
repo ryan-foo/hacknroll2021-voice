@@ -31,11 +31,11 @@ module.exports = {
         let speechText = strings["QUESTION_" + sessionAttributes.currentQuestion]
         + strings["SONGS"][questions[0]];
 
-        const repromptText;
+        const repromptText = '';
 
         return handlerInput.responseBuilder
         .speak(speechText)
-        .reprompt(repromptText)
+        .reprompt(speechText)
         .getResponse();
     }
 }
