@@ -22,7 +22,7 @@ module.exports = {
         if (sessionAttributes.state === "INITIAL") {
             speechText = strings["HELP_INITIAL"]
         } else if (sessionAttributes.state === "GAME_STARTED") {
-            speechText = `You are playing Quiz Lah. Right now it is ${sessionAttributes.currentPlayer}'s turn. If you need to hear the question again, say 'Alexa, repeat question'`,
+            speechText = `You are playing Quiz Lah. Right now it is ${sessionAttributes.currentPlayer}'s turn. If you need to hear the question again, say 'Alexa, repeat question'`
         } else if (sessionAttributes.state === "PLAY_AGAIN") {
             speechText = strings["HELP_RESTART"]
         }
