@@ -1,0 +1,124 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "quiz lah",
+            "modelConfiguration": {
+                "fallbackIntentSensitivity": {
+                    "level": "LOW"
+                }
+            },
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AnswerIntent",
+                    "slots": [
+                        {
+                            "name": "Answer",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "the answer is {Answer}",
+                        "my answer is {Answer}",
+                        "is it {Answer}",
+                        "{Answer} is my answer",
+                        "{Answer}"
+                    ]
+                },
+                {
+                    "name": "DontKnowIntent",
+                    "slots": [],
+                    "samples": [
+                        "i don't know",
+                        "don't know",
+                        "i don't know that one",
+                        "dunno",
+                        "skip",
+                        "i don't know that",
+                        "who knows",
+                        "i don't know this question"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StartOverIntent",
+                    "samples": [
+                        "start game",
+                        "new game",
+                        "start",
+                        "start new game"
+                    ]
+                },
+                {
+                    "name": "AMAZON.RepeatIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "Answer",
+                    "values": [
+                        {
+                            "id": "SONG_1",
+                            "name": {
+                                "value": "home"
+                            }
+                        },
+                        {
+                            "id": "MOVIE_1",
+                            "name": {
+                                "value": "ah boys to men"
+                            }
+                        },
+                        {
+                            "id": "PHRASE_1.4",
+                            "name": {
+                                "value": "entertained"
+                            }
+                        },
+                        {
+                            "id": "PHRASE_1.3",
+                            "name": {
+                                "value": "surprised"
+                            }
+                        },
+                        {
+                            "id": "PHRASE_1.2",
+                            "name": {
+                                "value": "sad"
+                            }
+                        },
+                        {
+                            "id": "PHRASE_1.1",
+                            "name": {
+                                "value": "frustrated"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
