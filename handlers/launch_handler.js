@@ -13,7 +13,7 @@ module.exports = {
     },
 
     handle(handlerInput) {
-        const speechText = strings["GREETING"];
+        const speechText = strings["SONG"]["1"];
         const repromptText = strings["GREETING_PROMPT"];
     
         const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
