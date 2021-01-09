@@ -30,7 +30,7 @@ module.exports = {
             qn = utils.getId(slots, round).qn; //cat's qn (1, 2, 3)
         }
         ans = utils.getId(slots, round).id; //player's ans ('A') for phrase, ('1') for movie and song
-        let speechText = utils.checkAnswer(cat, qn, ans);
+        let speechText = utils.checkAnswer(cat, ans, qn);
 
         // add points
         if (cat === 'PHRASE') {

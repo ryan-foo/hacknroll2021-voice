@@ -102,7 +102,7 @@ function getId(slot, round) {
 
 function getAnswer(cat, qn) {
     // Only for phrases
-    let selection = answers.cat.qn;
+    let selection = answers[cat][qn];
     return Object.keys(selection).filter(function(key) {
         return selection[key][0] === 1;
     })[0]; //e.g. 'A'
@@ -126,7 +126,7 @@ function checkAnswer(cat, ans, qn) {
 
 function endGame(numPlayers, scores) {
     let reply = ''
-    if (numPlayers === 1) {
+    if (numPlayers === 2) {
         const players = ['Player 1', 'Player 2'];
         const winningScore = Math.max(...scores);
         const winner = scores.indexOf(winningScore);
