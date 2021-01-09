@@ -1,0 +1,116 @@
+{
+	"version": "1.0",
+	"session": {
+		"new": false,
+		"sessionId": "amzn1.echo-api.session.5aadf741-4731-4267-8b43-1162cffb242b",
+		"application": {
+			"applicationId": "amzn1.ask.skill.b2dd4717-f26f-4aa2-bfe6-b0626b05b18b"
+		},
+		"attributes": {
+			"lastUtterance": "Alright, let's start! Now it's player one's turn. Category one -- guess the song from a short clip. Here's the song: <audio src='https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Songs/002_save_my_world.mp3' /> What is the name of the song?",
+			"score": [
+				0,
+				0
+			],
+			"round": 1,
+			"currentPlayer": 1,
+			"players": 2,
+			"questions": [
+				2,
+				1,
+				2,
+				3,
+				2,
+				3
+			],
+			"state": "GAME_STARTED",
+			"currentQuestion": 1
+		},
+		"user": {
+			"userId": "amzn1.ask.account.AHOBP2LIHMIWML3J4EMMSC5QPVAFKGAEJLTCF6S6Z5ZBTBPBPYCKCLQR43THEELMIE5HFD22DH4J5PERENT4CFSLLPGQLALGNTFLQRW6PBVHZXZFOHFFC2IMSNKXH26DQNVH7KZBAY72VA4DYRSHUVP62HYC7NGRQSY5EL52B5LSVEKKK3YXADLK47IN22NY47G665UKZBEWPDA"
+		}
+	},
+	"context": {
+		"Viewports": [
+			{
+				"type": "APL",
+				"id": "main",
+				"shape": "RECTANGLE",
+				"dpi": 160,
+				"presentationType": "STANDARD",
+				"canRotate": false,
+				"configuration": {
+					"current": {
+						"mode": "HUB",
+						"video": {
+							"codecs": [
+								"H_264_42",
+								"H_264_41"
+							]
+						},
+						"size": {
+							"type": "DISCRETE",
+							"pixelWidth": 1024,
+							"pixelHeight": 600
+						}
+					}
+				}
+			}
+		],
+		"Viewport": {
+			"experiences": [
+				{
+					"arcMinuteWidth": 246,
+					"arcMinuteHeight": 144,
+					"canRotate": false,
+					"canResize": false
+				}
+			],
+			"mode": "HUB",
+			"shape": "RECTANGLE",
+			"pixelWidth": 1024,
+			"pixelHeight": 600,
+			"dpi": 160,
+			"currentPixelWidth": 1024,
+			"currentPixelHeight": 600,
+			"touch": [
+				"SINGLE"
+			],
+			"video": {
+				"codecs": [
+					"H_264_42",
+					"H_264_41"
+				]
+			}
+		},
+		"Extensions": {
+			"available": {
+				"aplext:backstack:10": {}
+			}
+		},
+		"System": {
+			"application": {
+				"applicationId": "amzn1.ask.skill.b2dd4717-f26f-4aa2-bfe6-b0626b05b18b"
+			},
+			"user": {
+				"userId": "amzn1.ask.account.AHOBP2LIHMIWML3J4EMMSC5QPVAFKGAEJLTCF6S6Z5ZBTBPBPYCKCLQR43THEELMIE5HFD22DH4J5PERENT4CFSLLPGQLALGNTFLQRW6PBVHZXZFOHFFC2IMSNKXH26DQNVH7KZBAY72VA4DYRSHUVP62HYC7NGRQSY5EL52B5LSVEKKK3YXADLK47IN22NY47G665UKZBEWPDA"
+			},
+			"device": {
+				"deviceId": "amzn1.ask.device.AHGEPIYUFTB7NXX2GCPIATEF4D6QZAZNFPSBKLCSFAJTEXVLY34JI4ZL5YJZORVYTNX7UO7AIVIYIRLLJM46TDWS67FAZRADIPVGPAWKWTFFNARO6AO6B54OEQK6OAA7TKB62HJTKVIR7MBSGCFBSNNWWYBJDF7KVCSGC57K6HYLOZ7LSH6DQ",
+				"supportedInterfaces": {}
+			},
+			"apiEndpoint": "https://api.amazonalexa.com",
+			"apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLmIyZGQ0NzE3LWYyNmYtNGFhMi1iZmU2LWIwNjI2YjA1YjE4YiIsImV4cCI6MTYxMDE0NzYxOSwiaWF0IjoxNjEwMTQ3MzE5LCJuYmYiOjE2MTAxNDczMTksInByaXZhdGVDbGFpbXMiOnsiY29udGV4dCI6IkFBQUFBQUFBQUFBb0FiNFRMdW84M2t4c0FmUEsrYjBpS2dFQUFBQUFBQUJyeHZLcEVaZWhvRE1LK2xjQnBsQ2tBSjJQU2pTdUorNUFKYk1KQytUSmFFdDhLOEJuV0VMbjY4L25YVmtDOTZyQzVkZm90UjlBTzlYMFNXK3ZkUU8za0ZQRk4yd0prM0Q4ZEsvMnM4MEdXdUZBNUI1MlhMbndqd3RiSjExR1JmRDI5bWJPL3ZPVFM5TGlMS2xnbHdHNzF1aDgvSUt0OHBQcFMvclNSc0xGcmZJenFzSndTQllxWEQ0bUIvWUtDMHRnS05TUWhjNGFkV3lZMGQ4SS9rZGZ0aWoweDI2aUtFa0xEcEFPYnJISWZFVjd4WGl6VkthUDFPUWgyTElMSDQrVUZrL3ZZanV5ZElxeWRKekx3eGIzeXQzRWxJN0VnTHBkcXR6YjVxQVo2OVQ5UGNadW1SYzlUS0RWTmR1NEZUdlBPZURxRDdQdUIvQlZIcmxsK3NwVTFjRWdqZm9sUlRvTG9NeE5LQjgyYlY3VTJCcUZWNTRUYW9yTUQxc1NRMEVOVEg2cldGQzRzaFJPIiwiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhHRVBJWVVGVEI3TlhYMkdDUElBVEVGNEQ2UVpBWk5GUFNCS0xDU0ZBSlRFWFZMWTM0Skk0Wkw1WUpaT1JWWVROWDdVTzdBSVZJWUlSTExKTTQ2VERXUzY3RkFaUkFESVBWR1BBV0tXVEZGTkFSTzZBTzZCNTRPRVFLNk9BQTdUS0I2MkhKVEtWSVI3TUJTR0NGQlNOTldXWUJKREY3S1ZDU0dDNTdLNkhZTE9aN0xTSDZEUSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIT0JQMkxJSE1JV01MM0o0RU1NU0M1UVBWQUZLR0FFSkxUQ0Y2UzZaNVpCVEJQQlBZQ0tDTFFSNDNUSEVFTE1JRTVIRkQyMkRINEo1UEVSRU5UNENGU0xMUEdRTEFMR05URkxRUlc2UEJWSFpYWkZPSEZGQzJJTVNOS1hIMjZEUU5WSDdLWkJBWTcyVkE0RFlSU0hVVlA2MkhZQzdOR1JRU1k1RUw1MkI1TFNWRUtLSzNZWEFETEs0N0lOMjJOWTQ3RzY2NVVLWkJFV1BEQSJ9fQ.kPed-zUSPXrGrTE0rCy9thcXAlTKomrV5wVz5f3nITuD6KUnOY7zTmOgtf3_IupDb6dcCcSsgVKsplWCbSV_AJBqIosiIr4ecF1oeEa2fSqjnvDQ4M_wrIxII77CSiRySGt877os5eKZmQF_cZjkU4PqoYaj6SvhkW_w03BMwCxgmQnpfswOcCcr5vIALxCUvLU5B0-vkmYSAPghe5QH_1leP2miq-X2wv9DO81z1t7DWOOOZVGlOVGrzpIWw9vHcD13olNrCfmQkkZQbAG8gwoxDt78OJzeQv9nlf9U4UDbKusvWzw1iuInOqc7-KCRXKORN8fyADtrFQRXT_GNLw"
+		}
+	},
+	"request": {
+		"type": "IntentRequest",
+		"requestId": "amzn1.echo-api.request.d1c467b5-0e57-4d85-99ee-ab8de9d6aec3",
+		"locale": "en-US",
+		"timestamp": "2021-01-08T23:08:39Z",
+		"intent": {
+			"name": "DontKnowIntent",
+			"confirmationStatus": "NONE"
+		}
+	}
+}

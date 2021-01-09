@@ -7,7 +7,7 @@
 module.exports = {
 
     canHandle(handlerInput) {
-      return handlerInput.requestEnvelope.request.intent.name === 'RepeatIntent';
+      return handlerInput.requestEnvelope.request.intent.name === 'AMAZON.RepeatIntent';
     },
     
     handle(handlerInput) {
