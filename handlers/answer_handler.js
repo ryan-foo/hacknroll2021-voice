@@ -17,7 +17,7 @@ module.exports = {
         const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
         const round = sessionAttributes.round;
         let cat = cats[round - 1]; //1 - Song, 2 - Movie, 3 - Phrases
-        const player = sessionAttributes.currentPlayer; // 0 or 1
+        const player = sessionAttributes.currentPlayer - 1; // 0 or 1
         const numPlayers = sessionAttributes.players; // 1 or 2
         const count = sessionAttributes.currentQuestion; // increments - if currently is qn 1 then is player1, qn 2 then is player2
 
