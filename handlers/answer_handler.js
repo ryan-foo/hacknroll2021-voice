@@ -16,7 +16,7 @@ module.exports = {
         const slots = handlerInput.requestEnvelope.request.intent.slots['Answer'];
         const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
         const round = sessionAttributes.round;
-        const cat = cats[round - 1]; //1 - Song, 2 - Movie, 3 - Phrases
+        let cat = cats[round - 1]; //1 - Song, 2 - Movie, 3 - Phrases
         const player = sessionAttributes.currentPlayer - 1; // 0 or 1
         const numPlayers = sessionAttributes.player; // 1 or 2
         const count = sessionAttributes.currentQuestion; // increments - if currently is qn 1 then is player1, qn 2 then is player2
@@ -53,19 +53,19 @@ module.exports = {
                 sessionAttributes.currentQuestion += 1;
 
                 if (player === 1) { //player2:
-                    
-                    speechText += strings['PLAYER_1'] + strings['AGAIN'] + strings['QUESTION_' + (sessionAttributes.currentQuestion).toString()] + strings[cat][questions[count]]
+                    cat = cats[round]; //move on to next cat
+                    speechText += strings['PLAYER_1'] + strings['AGAIN'] + strings['QUESTION_' + (sessionAttributes.currentQuestion).toString()] + strings[cat][questions[sessionAttributes.currentQuestion]]
                     sessionAttributes.round += 1;
                 } else { //player1
-                    speechText += strings['PLAYER_2'] + strings['QUESTION_' + (sessionAttributes.currentQuestion).toString()] + strings[cat][questions[count]]
+                    speechText += strings['PLAYER_2'] + strings['QUESTION_' + (sessionAttributes.currentQuestion).toString()] + strings[cat][questions[sessionAttributes.currentQuestion]]
                 }
                 sessionAttributes.currentQuestion += 1;
                 sessionAttributes.player = utils.resetPlayer(player);
             } else { //solo
                 
                 sessionAttributes.currentQuestion += 2;
-
-                speechText += strings['QUESTION_' + (sessionAttributes.currentQuestion + 2).toString()] + strings[cat][questions[count]];
+                cat = cats[round]; //move on to next cat
+                speechText += strings['QUESTION_' + (sessionAttributes.currentQuestion).toString()] + strings[cat][questions[sessionAttributes.currentQuestion - 1]];
                 sessionAttributes.round += 1;
             }
         }
