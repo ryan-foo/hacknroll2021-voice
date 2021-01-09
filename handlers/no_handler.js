@@ -1,4 +1,5 @@
 const strings = require('../strings');
+const utils = require('../utils');
 
 /** No Intent Handler
  * This intent handler will detect if a player says no.
@@ -23,9 +24,10 @@ module.exports = {
       if (sessionAttributes.state === 'PLAY_AGAIN') {
 
         // TODO: clean up game State in Session Attributes
+        utils.resetState;
+
         
         speechText = strings["EXIT"];
-        sessionAttributes.state = 'ENDED';
       }
   
       else {

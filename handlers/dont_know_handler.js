@@ -33,7 +33,7 @@ module.exports = {
       // song 1, song 2, movie 1, movie 2, phrase 1, phrase 2
       // currentQuestion : index of the questions array
 
-      let correctAnswer = answers[cat][questions[count]][1];
+      let correctAnswer = utils.answers[cat][questions[count]][1];
       
       let points = sessionAttributes.score;
       let speechText = strings['SKIPPING'] + correctAnswer + '.';
