@@ -46,7 +46,7 @@ module.exports = {
         } 
         
         else {
-            speechText += strings['SCORE'] + points[player] + ", Player " + (player + 1).toString() + ". ";
+            speechText += strings['SCORE'] + points[player];
             
             if (numPlayers === 2) { //duo
 
