@@ -62,7 +62,6 @@ module.exports = {
                 sessionAttributes.currentQuestion += 1;
                 sessionAttributes.player = utils.resetPlayer(player);
             } else { //solo
-                
                 sessionAttributes.currentQuestion += 2;
                 cat = cats[round]; //move on to next cat
                 speechText += strings['QUESTION_' + (sessionAttributes.currentQuestion).toString()] + strings[cat][questions[sessionAttributes.currentQuestion - 1]];

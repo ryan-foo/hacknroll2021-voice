@@ -29,7 +29,7 @@ const answers = {
             A: [0, "awesome"],
             B: [0, "enlightening"],
             C: [1, "disappointed"],
-            D: [0, "nervous"]
+            D: [0, "discouraged"]
         },
         5: {
             A: [0, "embarrassed"],

@@ -25,13 +25,13 @@ module.exports = {
         },
 
         PHRASE: {
-            1: '<audio src="https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Phrases/001_walau_eh.mp3" /> Which of the following options is the most appropriate translation?',
-            2: '<audio src="https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Phrases/002_jialat.mp3" /> Which of the following options is the most appropriate translation?',
-            3: '<audio src="https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Phrases/003_eeeee.mp3" /> Which of the following options is the most appropriate translation?',
-            4: '<audio src="https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Phrases/004_chey.mp3" /> Which of the following options is the most appropriate translation?',
-            5: '<audio src="https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Phrases/005_choy.mp3" /> Which of the following options is the most appropriate translation?',
-            6: '<audio src="https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Phrases/006_dey.mp3" /> Which of the following options is the most appropriate translation?',
-            7: '<audio src="https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Phrases/007_atas.mp3" /> Which of the following options is the most appropriate translation?'
+            1: '<audio src="https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Phrases/001_walau_eh.mp3" /> Which of the following options is the most appropriate translation? (i) Frustrated (ii) Sad (iii) Surprised (iv) Entertained',
+            2: '<audio src="https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Phrases/002_jialat.mp3" /> Which of the following options is the most appropriate translation? (i) Delicious (ii) Terrible (iii) Tired (iv) Nervous',
+            3: '<audio src="https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Phrases/003_eeeee.mp3" /> Which of the following options is the most appropriate translation? (i) Interesting (ii) Exciting (iii) Entertaining (iv) Disgusting',
+            4: '<audio src="https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Phrases/004_chey.mp3" /> Which of the following options is the most appropriate translation? (i) Awesome (ii) Enlightening (iii) Disappointed (iv) Nervous',
+            5: '<audio src="https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Phrases/005_choy.mp3" /> Which of the following options is the most appropriate translation? (i) Embarrassed (ii) Touchwood (iii) Lucky (iv) Awkward',
+            6: '<audio src="https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Phrases/006_dey.mp3" /> Which of the following options is the most appropriate translation? (i) Fortunate (ii) Greeting (iii) Invasion (iv) Joyful',
+            7: '<audio src="https://quizlah.s3-ap-southeast-1.amazonaws.com/Questions/Phrases/007_atas.mp3" /> Which of the following options is the most appropriate translation? (i) Reasonable (ii) Friendly (iii) Cheap (iv) Fancy'
         },
 
         START: "Alright, let's start! ",
