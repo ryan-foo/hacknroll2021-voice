@@ -17,8 +17,8 @@ module.exports = {
         const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
         const round = sessionAttributes.round;
         let cat = cats[round - 1]; //1 - Song, 2 - Movie, 3 - Phrases
-        const player = sessionAttributes.currentPlayer - 1; // 0 or 1
-        const numPlayers = sessionAttributes.player; // 1 or 2
+        const player = sessionAttributes.currentPlayer; // 0 or 1
+        const numPlayers = sessionAttributes.players; // 1 or 2
         const count = sessionAttributes.currentQuestion; // increments - if currently is qn 1 then is player1, qn 2 then is player2
 
         let questions = sessionAttributes.questions; //randomised array of qn numbers to be asked
@@ -46,7 +46,7 @@ module.exports = {
         } 
         
         else {
-            speechText += strings['SCORE'] + points[player] + ", Player " + (player + 1).toString() + " ";
+            speechText += strings['SCORE'] + points[player] + ", Player " + (player + 1).toString() + ". ";
             
             if (numPlayers === 2) { //duo
 
@@ -59,8 +59,8 @@ module.exports = {
                 } else { //player1
                     speechText += strings['PLAYER_2'] + strings['QUESTION_' + (sessionAttributes.currentQuestion).toString()] + strings[cat][questions[sessionAttributes.currentQuestion]]
                 }
-                sessionAttributes.currentQuestion += 1;
-                sessionAttributes.player = utils.resetPlayer(player);
+                // sessionAttributes.currentQuestion += 1;
+                sessionAttributes.currentPlayer = utils.resetPlayer(player);
             } else { //solo
                 sessionAttributes.currentQuestion += 2;
                 cat = cats[round]; //move on to next cat

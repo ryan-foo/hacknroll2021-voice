@@ -42,16 +42,16 @@ module.exports = {
         QUESTION_5: ". Finally, test your knowledge of Singlish. We will play you a short audio clip of a Singlish phrase, and give you a few options. Pick the correct one to win! The phrase is ",
         QUESTION_6: ". Last question! Don't play play hor -- what's your guess? The phrase is ",
 
-        PLAYER_1: "Now it's player one's turn",
-        PLAYER_2: "Okay, player two, you're up",
-        AGAIN: "again",
+        PLAYER_1: "Now it's Player 1's turn",
+        PLAYER_2: "Okay, Player 2, you're up",
+        AGAIN: " again",
 
         // RESPONSE TO USERS
         SKIPPING: "Ok, the correct answer was ",
         SCORE: 'Your score is ', // string formatting here.
         CORRECT: "Woohoo! That's correct, you're doing great! ",
         WRONG: "Sian you got it wrong! But nehmind at least now you know the answer. ",
-        QUESTION: "Let's get to the next question.",
+        QUESTION: "Let's get to the next question. ",
         ANSWER_REPROMPT: "Don't give up leh! You can just make any guess.",
         CANCEL_AND_STOP: "Thanks for playing. Have fun!",
         WIN: "Huat ah, we have a winner with a score of ",
